@@ -1,0 +1,55 @@
+.f2x-info-web {
+	text-align: center;
+	
+	margin-top: 40px;
+	
+	width: 70%;
+	
+	margin: 40px auto 0;
+}
+
+.f2x-info-web .f2x-info-title {
+	font-size: 23px;
+	color: #444;
+}
+
+.f2x-info-web small {
+	color: #969696;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.f2x-info-web .f2x-info-subtitle {
+	font-size: 20px;
+	
+	margin: 50px 0 0;
+}
+
+.f2x-info-web .f2x-info-text {
+	font-size: 15px;
+	font-weight: 300;
+	color: #969696;
+	
+	margin-top: 50px;
+}
+.f2x-info-web .f2x-info-text p {
+	text-align: justify
+}
+
+
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-info-web {
+		width: 80%;
+	}
+
+}
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

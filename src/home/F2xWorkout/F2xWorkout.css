@@ -1,0 +1,46 @@
+.f2x-home .f2x-home-workout-title {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 20px 55px 35px 120px;
+	
+	color: #5a5a5a;
+}
+
+.f2x-home .f2x-home-workout-title .f2x-workouts-line {
+	display: inline-block;
+}
+
+
+
+
+.f2x-home-workout-list .img-cont {
+	width: 80%;
+}
+
+
+
+
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-home .f2x-home-workout-title {
+		font-size: 12px;
+		margin: 20px 15px 25px;
+	}
+	.f2x-home .f2x-home-workout-title .f2x-workouts-line {
+		width: 100%;
+		float: left;
+		
+		padding-bottom: 20px;
+		
+		text-align: center;
+	}
+}
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

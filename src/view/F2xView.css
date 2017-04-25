@@ -1,0 +1,87 @@
+.f2x-view {
+	width: 1360px;
+	
+	margin: 40px auto 0 auto;
+}
+
+.f2x-view .f2x-trainer-photo {
+	width: 275px;
+	height: 215px;
+	
+	margin-left: 0;
+}
+
+
+.f2x-view .f2x-trainer-info {
+	padding: 20px 25px 35px 0;
+	
+	width: 374px;
+}
+
+.f2x-view .f2x-trainer-info .f2x-creator-name-2 {
+	font-size: 24px;
+	color: #414141;
+	text-transform: uppercase;
+}
+
+.f2x-view .f2x-trainer-info .f2x-creator-info {
+	margin-top: 10px;
+	
+	font-size: 14px;
+	color: #5a5a5a;
+}
+
+.f2x-view .f2x-related-title {
+	font-size: 14px;
+	color: #414141;
+	
+	margin-top: 8px;
+	margin-bottom: 20px;
+}
+
+
+
+.f2x-view .f2x-trainer-workout .circ-wo-list-item {
+	width: 226px;
+	height: auto;
+}
+.f2x-view .f2x-trainer-workout .circ-wo-list-item .img-cont {
+	width: 165px;
+	height: 165px;
+	
+	margin: 0 auto;
+}
+
+
+.f2x-view .f2x-vList .f2x-video .f2x-wardrope {
+	display: inline;
+	
+	font-size: 12px;
+}
+.f2x-view .f2x-vList .f2x-video .f2x-video-labels {
+	font-size: 12px;
+}
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-view {
+		width: 100%;
+	}
+	.f2x-related-title, .f2x-trainer-workout {
+		display: none;
+	}
+	.f2x-view .f2x-vList .f2x-video .f2x-wardrope {
+		display: block;
+	}
+	.f2x-view .float-l {
+		width: 100%;
+	}
+}
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

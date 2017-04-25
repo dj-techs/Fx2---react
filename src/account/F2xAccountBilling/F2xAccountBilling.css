@@ -1,0 +1,168 @@
+.f2x-account-data {
+	width: 370px;
+	
+	text-align: center;
+	
+	padding: 0 105px 0 100px;
+	
+	float: left;
+}
+
+.f2x-account-data .f2x-account-input {
+	font-size: 10px;
+	
+	text-align: left;
+	
+	margin-bottom: 15px;
+	
+	position: relative;
+}
+.f2x-account-data .f2x-account-input input {
+	border-color: #c8c8c8;
+	color: #222;
+}
+.f2x-account-data .f2x-account-input input:focus {
+	border-color: #414141;
+}
+
+
+
+
+
+.f2x-account-data .f2x-account-email {
+	text-align: left;
+	font-size: 10px;
+	
+	margin: 73px 0 0 0;
+}
+
+.f2x-account-data .f2x-account-email .f2x-account-email-dir {
+	font-size: 14px;
+	
+	margin: 12px 0 25px 0;
+}
+.f2x-account-data .f2x-account-email .f2x-account-email-change {
+	float: right;
+	
+	padding: 0 12px;
+}
+
+
+.f2x-account-data .f2x-account-margin {
+	margin: 43px 0 0 0;
+}
+
+
+
+.f2x-account-data .f2x-account-info {
+	width: 20px;
+	height: 20px;
+	
+	margin: 23px 0 0 10px;
+}
+.f2x-account-data .f2x-account-info div {
+	width: 20px;
+	height: 20px;
+}
+
+
+.f2x-account-data .f2x-account-pay {
+	text-align: center;
+	
+	font-size: 14px;
+	
+}
+
+
+.f2x-account-data .f2x-account-terms {
+	text-align: center;
+	font-size: 12px;
+	color: #969696;
+	
+	margin: 15px 0 10px 0;
+}
+
+
+
+.f2x-billing-cvv {
+	position: absolute;
+	
+	bottom: 52px;
+	left: -35px;
+	
+	width: 250px;
+	    
+	background: #fff;
+	
+	border: solid 1px #969696;
+	
+	border-radius: 3px;
+	
+	padding: 17px 15px 15px;
+	
+	filter: drop-shadow(0 3px 5px rgba(0,0,0,.3));
+	
+	color: #414141;
+	font-weight: 200;
+	font-size: 11px;
+	text-align: left;
+	
+	display: none;
+}
+
+.f2x-billing-cvv:before {
+	content: '';
+	
+	position: absolute;
+	
+	top: 100%;
+	left: 180px;
+	
+	border-right: 18px solid transparent;
+	border-left: 18px solid transparent;
+	border-top: 20px solid #969696;
+}
+.f2x-billing-cvv:after {
+	content: '';
+	
+	position: absolute;
+	
+	top: CALC(100% - 1px);
+	left: 180px;
+	
+	border-right: 18px solid transparent;
+	border-left: 18px solid transparent;
+	border-top: 20px solid #fff;
+}
+
+.f2x-account-terms u {
+	cursor: pointer;
+}
+
+.f2x-terms-conditions {
+	left: 50%;
+	margin-left: -141px;
+	
+	top: auto;
+	bottom: 40px;
+}
+
+.f2x-terms-conditions:before {
+	left: 50%;
+	margin-left: -9px;
+}
+.f2x-terms-conditions:after {
+	left: 50%;
+	margin-left: -9px;
+}
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-billing-cvv {
+		bottom: auto;
+	}
+	
+	
+}

@@ -1,0 +1,364 @@
+.f2x-my-workout-content {
+	width: 925px;
+	
+	margin: 10px auto 0 auto;
+}
+
+.f2x-my-workout-content .f2x-my-workout-content-style {
+	float: right;
+	
+	width: 25px;
+	height: 22px;
+	
+	margin: 0 15px 0 0;
+}
+.f2x-my-workout-content .f2x-my-workout-type-inactive {
+	opacity: .1;
+}
+
+
+.f2x-preconfigure-workout-list {
+	width: 100%;
+	
+	margin: 25px auto 0 auto;
+}
+.f2x-preconfigure-workout-list .f2x-myworkout-item {
+	width: 32%;
+	
+	margin: 0 2% 25px 0;
+	
+	display: inline-block;
+	
+	position: relative;
+}
+.f2x-preconfigure-workout-list .f2x-myworkout-item:nth-child(3n) {
+	margin: 0;
+}
+
+.f2x-preconfigure-workout-list .f2x-myworkout-item .img {
+	width: CALC(100% - 2px);
+	height: 162px;
+
+	cursor: pointer;
+	
+	border: solid 1px #ccc;
+	border-bottom-width: 0;
+}
+.f2x-preconfigure-workout-list .f2x-myworkout-item:hover .img {
+	opacity: .4;
+}
+
+.f2x-preconfigure-workout-list .f2x-myworkout-item .f2x-myworkout-title {
+	font-size: 14px;
+	
+	position: relative;
+	
+	margin-top: 10px;
+}
+.f2x-preconfigure-workout-list .f2x-myworkout-item .f2x-myworkout-title .f2x-myworkout-settings {
+	float: right;
+	
+	padding: 3px 12px 1px 7px;
+	
+	display: none;
+	
+}
+.f2x-preconfigure-workout-list .f2x-myworkout-item:hover .f2x-myworkout-title .f2x-myworkout-settings {
+	display: block;
+	
+}
+.f2x-preconfigure-workout-list .f2x-myworkout-item .f2x-myworkout-datas {
+	font-size: 12px;
+	
+	color: #969696;
+}
+
+.f2x-preconfigure-workout-list .f2x-myworkout-item .f2x-exercise-img-play {
+	position: absolute;
+	
+	width: 60px;
+	height: 30px;
+	
+	left: 6px;
+	top: 125px;
+
+	display: none;
+}
+.f2x-preconfigure-workout-list .f2x-myworkout-item:hover .f2x-exercise-img-play {
+	display: block;
+}
+
+
+
+
+
+.f2x-preconfigure-workout-group {
+	position: relative;
+	width: 100%;
+	
+	margin: 0 auto 0 auto;
+	padding: 21px 0 10px 0;
+}
+.f2x-preconfigure-workout-group-i {
+	position: relative;
+	width: 100%;
+	
+	white-space: nowrap;
+	
+	overflow: hidden;
+	overflow-x: auto;
+	
+	background: #f6f6f6;
+	
+	height: 111px;
+	
+	margin-bottom: 10px;
+}
+.f2x-preconfigure-workout-group:hover .f2x-preconfigure-workout-group-i {
+	opacity: .4;
+}
+.f2x-preconfigure-workout-group .f2x-myworkout-item {
+	max-width: 185px;
+	height: 111px;
+	margin: 0 0% 2px 0;
+	
+	display: inline-block;
+	
+	position: relative;
+}
+
+.f2x-preconfigure-workout-group .f2x-myworkout-item img {
+	width: 100%;
+	height: 111px;
+	
+	cursor: pointer;
+}
+
+.f2x-preconfigure-workout-group .f2x-myworkout-title {
+	font-size: 14px;
+}
+
+.f2x-preconfigure-workout-group .f2x-myworkout-title .f2x-myworkouts-options {
+	float: right;
+	
+	display: none;
+}
+.f2x-preconfigure-workout-group:hover .f2x-myworkout-title .f2x-myworkouts-options {
+	display: block;
+}
+.f2x-preconfigure-workout-group .f2x-myworkout-title .f2x-myworkouts-options button {
+	margin-left: 4px;
+}
+
+.f2x-preconfigure-workout-group .f2x-myworkout-datas {
+	font-size: 12px;
+	
+	color: #969696;
+}
+
+.f2x-preconfigure-workout-group .f2x-myworkout-grouped {
+	position: relative;
+}
+.f2x-preconfigure-workout-group .f2x-exercise-img-play {
+	position: absolute;
+	
+	width: 60px;
+	height: 30px;
+	
+	left: 6px;
+	top: 96px;
+
+	display: none;
+}
+.f2x-preconfigure-workout-group:hover .f2x-exercise-img-play {
+	display: block;
+}
+
+
+
+
+
+
+.f2x-myworkout-header {
+	display: block;
+}
+
+.f2x-myworkout-filter-box {
+	position: fixed;
+	
+	left: 0;
+	top: 0;
+	
+	width: 100%;
+	height: 100%;
+	
+	background: rgba(0,0,0,.3);
+	
+	z-index: 201;
+}
+
+.f2x-myworkout-filter-box .f2x-myworkout-filter {
+	position: fixed;
+	
+	left: 0;
+	bottom: 0;
+	
+	width: 100%;
+	
+	background: white;
+	
+	box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.f2x-myworkout-filter-box .f2x-myworkout-filter .filter-image {
+	float: left;
+	
+	width: 40%;
+	height: 90px;
+	
+	margin: 10px;
+}
+
+.f2x-myworkout-filter-box .f2x-myworkout-filter .filter-data {
+	font-size: 13px;
+	
+	float: left;
+	
+	margin-top: 45px;
+}
+
+.f2x-myworkout-filter-box .f2x-myworkout-filter .filter-data b {
+	font-weight: 500 !important;
+}
+.f2x-myworkout-filter-box .f2x-myworkout-filter .filter-data span {
+	font-size: 11px;
+	
+	margin-top: 5px;
+	
+	float: left;
+	
+	color: #969696;
+}
+.f2x-myworkout-filter-box .f2x-myworkout-filter ul {
+	list-style: none;
+	
+	padding: 0;
+	margin: 5px 0 0 0;
+	
+	font-size: 14px;
+}
+
+.f2x-myworkout-filter-box .f2x-myworkout-filter ul li {
+	padding: 15px 15px;
+	
+	border-top: solid 1px #eee;
+}
+
+.f2x-myworkout-filter-box .f2x-myworkout-filter .cancelBtn {
+	background: #eee;
+	
+	color: #414141;
+	font-size: 12px;
+	text-align: center;
+	
+	padding: 15px 0;
+}
+
+
+
+
+.f2x-myworkout-video-settings {
+	background: #fff;
+	
+	border: solid 1px #969696;
+	
+	position: absolute;
+	
+	top: 0;
+	right: 0;
+	
+	padding: 8px 10px;
+	
+	z-index: 101;
+	
+	display: none;
+}
+
+.f2x-myworkout-video-settings ul {
+	padding: 0;
+	margin: 0;
+	
+	list-style: none;
+	
+	font-size: 13px;
+}
+
+.f2x-myworkout-video-settings ul li {
+	padding: 4px 0;
+	margin: 0;
+}
+.f2x-myworkout-video-settings ul li  img {
+	float: left;
+	
+	margin: 1px 10px 0 0;
+}
+
+
+.f2x-filter-close-btn {
+	width: 20px;
+    padding: 12px;
+}
+
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-myworkout-header {
+		display: none;
+	}
+	.f2x-my-workout-content {
+		margin: 0 auto;
+		
+		width: 100%;
+	}
+	.f2x-preconfigure-workout-list .f2x-myworkout-item {
+		width: 100%;
+		max-width: 100%;
+		display: block;
+		
+		margin-bottom: 15px;
+	}
+	.list {
+		padding: 0;
+	}
+	.f2x-preconfigure-workout-list .f2x-myworkout-item:nth-child(3n) {
+		margin: 0 2% 15px 0;
+	}
+	
+	.f2x-preconfigure-workout-list .f2x-myworkout-item .img {
+		height: 190px;
+	}
+	.f2x-preconfigure-workout-list .f2x-myworkout-item .f2x-myworkout-title {
+		padding-left: 15px;
+		font-size: 14px;
+	}
+	.f2x-preconfigure-workout-list .f2x-myworkout-item .f2x-myworkout-datas {
+		font-size: 10px;
+	}
+	.f2x-preconfigure-workout-list .f2x-myworkout-item:hover .f2x-exercise-img-play {
+		display: none;
+	}
+	.f2x-preconfigure-workout-list {
+		width: 100%;
+		
+		margin: 0px auto 0 auto;
+	}
+}
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}
+

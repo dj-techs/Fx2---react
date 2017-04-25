@@ -1,0 +1,66 @@
+.f2x-membership-subtitle {
+	padding: 40px 0;
+	
+	font-size: 14px;
+}
+
+
+.f2x-membership-price {
+	font-weight: 200;
+	font-size: 30px;
+	
+	padding: 0 0 40px 0;
+}
+.f2x-membership-price span {
+	display: inline-block;
+	font-size: 16px;
+}
+
+
+.f2x-membership-description {
+	font-weight: 300;
+	font-size: 14px;
+	width: 250px;
+    margin: 0 auto;
+}
+.f2x-membership-description span {
+	font-weight: 400;
+}
+
+.f2x-membership-description-2 {
+	font-weight: 200;
+	font-size: 14px;
+	width: 250px;
+    margin: 0 auto;
+    
+	padding: 40px 0 0 0;
+}
+
+.f2x-membership-button {
+	padding: 50px 0;
+}
+
+
+
+
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-account-data {
+		width: auto !important;
+		padding: 0 !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		float: none;
+	}
+}
+
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 320px) {
+	
+}

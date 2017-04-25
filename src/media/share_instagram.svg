@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>share_instagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="25" cy="25" r="25"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="50" height="50" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0,5.78044313 C0.096175692,2.57991056 2.72958934,0.00603174603 5.95301587,0.00603174603 L14.0337415,0.00603174603 C17.3176417,0.00603174603 19.9894785,2.67768707 19.9894785,5.96176871 L19.9894785,14.0424943 C19.9894785,17.3263946 17.3176417,19.9982313 14.0337415,19.9982313 L5.95301587,19.9982313 C2.72958934,19.9982313 0.096175692,17.4241777 3.48360796e-16,14.2238102 L3.48990174e-16,5.78044313 L0,5.78044313 Z M17.9782313,14.0424943 C17.9782313,16.2209524 16.2121995,17.9869841 14.0337415,17.9869841 L5.95301587,17.9869841 C3.77455782,17.9869841 2.00852608,16.2209524 2.00852608,14.0424943 L2.00852608,5.96176871 C2.00852608,3.78331066 3.77455782,2.01723356 5.95301587,2.01723356 L14.0337415,2.01723356 C16.2121995,2.01723356 17.9782313,3.78331066 17.9782313,5.96176871 L17.9782313,14.0424943 Z" id="path-3"></path>
+        <path d="M9.99337868,4.83133787 C7.14226757,4.83133787 4.82258503,7.15102041 4.82258503,10.0021315 C4.82258503,12.8530612 7.14226757,15.1727438 9.99337868,15.1727438 C12.8444898,15.1727438 15.1639909,12.8532426 15.1639909,10.0021315 C15.1639909,7.15102041 12.8444898,4.83133787 9.99337868,4.83133787 Z M9.99337868,13.1614966 C8.24843537,13.1614966 6.8338322,11.7470748 6.8338322,10.0021315 C6.8338322,8.25714286 8.24843537,6.84258503 9.99337868,6.84258503 C11.7383673,6.84258503 13.1527438,8.25714286 13.1527438,10.0021315 C13.1527438,11.7470748 11.7383673,13.1614966 9.99337868,13.1614966 Z" id="path-5"></path>
+        <path d="M16.4129252,4.87034014 C16.4129252,5.55451247 15.8582313,6.1093424 15.1739229,6.1093424 C14.4897506,6.1093424 13.9348753,5.55451247 13.9348753,4.87034014 C13.9348753,4.18598639 14.4897506,3.63129252 15.1739229,3.63129252 C15.8582313,3.63129252 16.4129252,4.18598639 16.4129252,4.87034014 Z" id="path-7"></path>
+    </defs>
+    <g id="Artboards" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="S1_Configured_Viewer_Share" transform="translate(-760.000000, -649.000000)">
+            <g id="S1_Exercises_Modal_Share-Preconfigured" transform="translate(452.000000, 261.000000)">
+                <g id="Share-via-Social-Media" transform="translate(308.000000, 351.000000)">
+                    <g id="share_instagram" transform="translate(0.000000, 37.000000)">
+                        <use id="Oval-4" stroke="#5A5A5A" mask="url(#mask-2)" stroke-width="2" fill="#FEFEFE" xlink:href="#path-1"></use>
+                        <g id="Social---Insta---Dark" transform="translate(15.000000, 15.000000)">
+                            <g id="Instagram">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <polygon id="Fill-1" fill="#5A5A5A" mask="url(#mask-4)" points="0 20.0435374 19.9972789 20.0435374 19.9972789 0 0 0"></polygon>
+                                <mask id="mask-6" fill="white">
+                                    <use xlink:href="#path-5"></use>
+                                </mask>
+                                <g id="Clip-5"></g>
+                                <polygon id="Fill-4" fill="#5A5A5A" mask="url(#mask-6)" points="0 20.0435374 19.9972789 20.0435374 19.9972789 0 0 0"></polygon>
+                                <mask id="mask-8" fill="white">
+                                    <use xlink:href="#path-7"></use>
+                                </mask>
+                                <g id="Clip-8"></g>
+                                <polygon id="Fill-7" fill="#5A5A5A" mask="url(#mask-8)" points="0 20.0435374 19.9972789 20.0435374 19.9972789 0 0 0"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

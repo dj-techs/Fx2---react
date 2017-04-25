@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="19px" viewBox="0 0 22 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - Edit Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7-Plus" transform="translate(-121.000000, -362.000000)" stroke="#222222">
+            <g id="Icon---Share" transform="translate(121.000000, 361.000000)">
+                <path d="M19.4574491,2.66212682 C20.4750495,2.23645908 21.1150632,2.76826241 20.8881704,3.84420201 L17.9310017,17.8672733 C17.7035669,18.9457831 16.7934241,19.2958566 15.8908224,18.6438981 L9.17643991,13.7940298 L1.80462645,11.4452979 C0.75621368,11.1112633 0.731855734,10.4951434 1.74883579,10.0697352 L19.4574491,2.66212682 Z" id="Location" stroke-linecap="round"></path>
+                <path d="M9.16893741,13.795524 L9.35856925,18.2556207 C9.39847457,19.1941845 9.92003215,19.3718473 10.5258719,18.6496149 L12.561755,16.2226021" id="Path-2" stroke-linecap="round"></path>
+                <path d="M21.0123582,2.34587259 L9.08587178,13.8640139" id="Line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

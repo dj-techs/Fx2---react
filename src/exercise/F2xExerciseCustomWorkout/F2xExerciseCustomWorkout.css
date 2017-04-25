@@ -1,0 +1,333 @@
+.f2x-configure-workout {
+	padding: 0px 0 56px 0;
+}
+
+.f2x-configure-workout .f2x-configure-label {
+	position: absolute;
+	
+	width: 80%;
+	
+	background: #fff;
+	
+	border: solid 1px #414141;
+	
+	font-size: 11px;
+	text-align: center;
+	
+	padding: 10px 0;
+	
+	text-transform: uppercase; 
+
+	top: 100%;
+	left: 50%;
+	
+	margin: 8px 0 0 -40%;
+	
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+	
+	border-radius: 3px;
+	
+	transition:all .2s ease-in-out;
+}
+.f2x-configure-workout .f2x-configure-label:before {
+   content:"";
+   position: absolute;
+   
+   left: 50%;
+   top: -15px;
+   
+   width: 0;
+   height: 0;
+   
+   border-bottom: 15px solid #414141;
+   border-right: 14px solid transparent;
+   border-left: 14px solid transparent;
+   
+   margin-left: -14px;
+}
+.f2x-configure-workout .f2x-configure-label:after {
+   content:"";
+   position: absolute;
+   
+   left: 50%;
+   top: -14.5px;
+   
+   width: 0;
+   height: 0;
+   
+   border-bottom: 15px solid #fff;
+   border-right: 14px solid transparent;
+   border-left: 14px solid transparent;
+   
+   margin-left: -14px;
+}
+
+.f2x-configure-workout .f2x-configure-workout-box {
+	position: relative;
+	
+	background-color: #fcfcfc;
+	
+	width: 100%;
+	height: 90px;
+	
+	font-size: 14px;
+	color: #5a5a5a;
+	
+	display: inline-block;
+}
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-shadow {
+	position: absolute;
+	
+	width: 100%;
+	height: 5px;
+	
+	top: 0; 
+	left: 0; 
+	
+	background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content {
+	border: solid 1px #828282;
+	height: 88px; 
+	
+	top: 0; 
+	left: 0;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+.f2x-modal-box .f2x-configure-workout .f2x-configure-workout-box {
+	width: 942px;
+}
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider{
+	position: relative;
+	
+	height: auto;
+	
+	top: 4px; 
+	left: 0;
+	
+	white-space: nowrap;
+	
+	text-align: left;
+}
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-add-workout {
+
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	width: 153.1px;
+	height: 80px;
+	margin-left:3px;
+	margin-top:0;	
+	
+	position: relative;
+	
+	display: inline-block;
+	
+	transition:all .3s ease-in-out;
+}
+
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider  .f2x-add-workout .remove {
+
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+	width: 15px;
+	height: 15px;
+	right: 5px;
+	top: 5px;
+	
+	position:absolute;
+}
+
+
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-configure-workout-empty {
+	width: 100%;
+	height: 80px;
+	
+	text-align: center;
+	line-height: 80px;
+	vertical-align: middle;
+	color: #5a5a5a;
+	font-size: 14px;
+	
+	float: left;
+	
+	overflow: auto;
+}
+
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-save {
+	margin-top: 9px; 
+}
+
+
+
+
+
+.f2x-shadow-workout {
+	position: absolute;
+	
+	background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 74%);
+	
+	top: 250px;
+	left: 0;
+	
+	width: 100%;
+	height: 10px;
+	
+	border-top: solid 1px rgba(0,0,0,.2);
+	
+	z-index: 15;
+}
+
+
+
+
+.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .long {
+	width: 160px !important;
+	
+	margin-left: 0;
+	padding-right: 0;
+}
+
+
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+	.f2x-configure-workout .f2x-configure-workout-box {
+		width: 696px;
+	}
+	
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-empty {
+		width: 547px;
+	}
+	
+	.f2x-modal-box .f2x-configure-workout .f2x-configure-workout-box {
+		width: 615px;
+	}
+	
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-add-workout {
+		width: 112.1px;
+	}
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .long {
+		width: 119px !important;
+	}
+
+}
+ 
+ 
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-configure-workout-empty .f2x-add-icon {
+		border: dashed 1px #ccc;
+		
+		width: 50px;
+		height: 50px;
+		
+		display: inline-block;
+		
+		padding: 0;
+		margin: 10px 0 0 0;
+		
+		border-radius: 3px;
+	}
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-add-workout {
+		width: 14% !important;
+	}
+	
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-configure-workout-empty .f2x-add-icon img {
+		vertical-align: top !important;
+		
+		margin: 9px 0 0 7px;
+	}
+
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content {
+		border-width: 0;		
+	}
+	
+
+	.f2x-configure-workout {
+		padding: 0;
+		
+		position: fixed;
+		
+		width: 100%;
+		
+		z-index: 10;
+	}
+	.f2x-configure-workout .f2x-configure-workout-box {
+		width: auto;
+		display: block;
+		
+		border-width: 0;
+		border-bottom-width: 2px;
+	
+		/*box-shadow: 0 0px 12px 0 rgba(0, 0, 0, 0.3);*/
+	}
+	
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-empty {
+		width: 315px;
+	}
+	
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-save {
+		display: none;
+	}
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider{
+		height: auto;
+		
+		top: 10px;
+	}
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-configure-workout-empty {
+		
+	}
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-add-workout {
+		width: 70px;
+		height: 70px;
+		
+		margin-left: 8px;
+		
+		border-radius: 5px;
+	}
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-add-workout:nth-last-child(2) {
+		margin-right: 45px;
+		margin-right: 0;
+	}
+	
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-content .f2x-configure-workout-slider .f2x-cta-workout {
+		background-size: 30px 30px;
+		
+		width: 66px;
+		height: 66px;
+		
+		margin-left: 8px;
+		margin-right: 50px;
+		
+		border-radius: 5px;
+	}
+	
+	.f2x-configure-workout .f2x-configure-workout-box .f2x-configure-workout-box-shadow {
+		display: none;
+	}
+	
+	.f2x-modal-box .f2x-configure-workout .f2x-configure-workout-box {
+		width: 100%;
+	}
+}
+ 
+/* Móviles en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

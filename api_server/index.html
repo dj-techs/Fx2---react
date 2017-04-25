@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Local dev proxy example</title>
+    <style>
+    body {margin:0;padding:0}
+    .hidden {display:none}
+    .block {margin:0;padding:15px}
+    .token {font-family:monospace;width:300px}
+    #status.loading {background-color:#fcf8e3;border-top:1px solid #faf2cc;border-bottom:1px solid #faf2cc}
+    #status.success {background-color:#dff0d8;border-top:1px solid #d0e9c6;border-bottom:1px solid #d0e9c6}
+    #status.error {background-color:#f2dede;border-top:1px solid #ebcccc;border-bottom:1px solid #ebcccc}
+    #status-text.loading {color:#8a6d3b}
+    #status-text.success {color:#3c763d}
+    #status-text.error {color:#a94442}
+    #result {font-family:monospace;white-space:pre}
+    </style>
+  </head>
+  <body>
+  <form id="form" class="block">
+    <label>Access token: <input type="text" id="token" class="token" autofocus></label>
+    <label>Endpoint:
+      <select id="endpoint">
+        <option value="filter">Filters</option>
+        <option value="exercise">Exercises</option>
+        <option value="workout/public">Workouts</option>
+        <option value="user">User</option>
+      </select>
+    </label>
+    <button type="submit" id="button">Get</button>
+  </form>
+  <div id="status" class="hidden">Status: <span id="status-text"></span></div>
+  <div id="result" class="hidden"></div>
+  <script>
+  function escape_html(text) {
+    return text.replace(/&/g, '&amp;')
+               .replace(/</g, '&lt;')
+               .replace(/>/g, '&gt;')
+               .replace(/"/g, '&quot;')
+               .replace(/'/g, '&#39;')
+               .replace(/\//g, '&#x2F;');
+
+  }
+  function sendRequest() {
+    var token = document.getElementById('token').value,
+        endpoint = document.getElementById('endpoint').value,
+        status = document.getElementById('status');
+        statusText = document.getElementById('status-text');
+        result = document.getElementById('result');
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/api/v0/' + endpoint + '/', true);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+    xhr.send();
+
+    result.innerHTML = '';
+    result.className = 'hidden';
+
+    status.className = 'block loading';
+    statusText.innerHTML = 'Loading...';
+    statusText.className = 'loading';
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4) {
+        if (xhr.status != 200) {
+          status.className = 'block error';
+          statusText.className = 'error';
+        } else {
+          status.className = 'block success';
+          statusText.className = 'success';
+        }
+        statusText.innerHTML = 'HTTP ' + xhr.status + ' ' + xhr.statusText;
+
+        var result_text = xhr.responseText;
+        try {
+          result_text = JSON.stringify(JSON.parse(xhr.responseText), null, 2)
+        } catch (e) {}
+
+        result.innerHTML = escape_html(result_text);
+        result.className = 'block';
+      }
+    }
+
+    return false;
+  }
+  window.onload = function() {
+    document.getElementById('form').onsubmit = sendRequest;
+  }
+  </script>
+  </body>
+</html>

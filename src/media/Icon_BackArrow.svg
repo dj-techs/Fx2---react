@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Header - Back Arrow@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Icon-Header---Back-Arrow" stroke="#222222">
+            <path d="M16.5,9.5 L1.46433115,9.5" id="Line"></path>
+            <polyline id="Path-2" stroke-linejoin="round" transform="translate(5.000000, 9.500000) rotate(-270.000000) translate(-5.000000, -9.500000) " points="-2.5 5.5 5 13.5 12.5 5.5"></polyline>
+        </g>
+    </g>
+</svg>

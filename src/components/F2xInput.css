@@ -1,0 +1,228 @@
+.f2x-input-box {
+	width: 200px;
+	margin: 0 auto;
+	
+	position: relative;
+	
+	background-color: white !important;
+}
+
+.f2x-input-box label {
+	position: absolute;
+	
+	top: 50%;
+	left: 0;
+	
+	margin-top: -10px;
+	
+	font-size: 15px;
+	color: #9e9e9e;
+	
+	overflow: hidden;
+	
+	white-space: nowrap;
+	
+	transition:all .2s ease-in-out;
+	
+	cursor: text;
+} 
+.f2x-input-box label.slc {
+	top: -2px;
+	/*left: 0;*/
+	font-size: 10px;
+	
+	cursor: default;
+} 
+
+.f2x-input-box span {
+	position: absolute;
+	
+	bottom: 0;
+	left: 0;
+	
+	width: 0;
+	
+	height: 1px;
+	
+	background: #222;
+	
+	transition:all .2s ease-in-out;
+}
+.f2x-input-box span.slc {
+	width: 100%;
+}
+
+
+.f2x-input-box .error {
+	border-color: red !important;
+	color: red !important;
+}
+
+
+.f2x-input-box .error-msg {
+	color: red !important;
+	position: absolute;
+	top:38px;
+	left:-20px;
+	
+	width:340px;
+	height:18px;
+	
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 10px;
+	
+}
+.f2x-input-box .info-msg {
+	position: absolute;
+	top:38px;
+	left:-20px;
+	
+	width:340px;
+	height:18px;
+	
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 10px;
+}
+
+
+.f2x-input {
+	background: transparent;
+	
+	width: 200px;
+	height: 36px;
+	
+	font-size: 14px;
+	color: #222;
+	
+	padding: 0;
+	padding-left: 30px;
+	margin: 0;
+	
+	border-width: 0;
+	border-bottom: solid 1px #c8c8c8;
+	
+	transition: all .3s ease-in-out;
+}
+.f2x-input:focus {
+	border-bottom-color: #414141;
+}
+
+
+
+
+
+.f2x-input-long {
+	width: 300px;
+}
+.f2x-input-long-2 {
+	width: CALC(100% - 30px);
+}
+.centered .f2x-input-long {
+	width: 300px;
+}
+
+.f2x-input-extra-long {
+	width: 320px;
+}
+
+
+
+.f2x-input-icon {
+	position: absolute;
+	
+	top: 0;
+	left: 2px;
+	
+	background-position: left center;
+	
+	background-size: 17px 17px;
+
+	width: 17px;
+	height: 37px;
+	
+	background-repeat: no-repeat
+}
+.f2x-input-icon-right {
+	position: absolute;
+	
+	top: 0;
+	left: 100%;
+	
+	background-position: left center;
+	background-size: 17px 17px;
+	background-repeat: no-repeat;
+
+	width: 17px;
+	height: 37px;
+	
+	margin-left: -19px;
+	
+}
+
+.f2x-input-icon-error {
+	position: absolute;
+	
+	top: 0;
+	right: -25px;
+	
+	background-position: left center;
+	background-size: 21px 21px;
+	background-repeat: no-repeat;
+
+	width: 21px;
+	height: 37px;
+	
+	margin-left: 10px;
+	
+	
+}
+
+
+.f2x-input-text-right {
+	position: absolute;
+	
+	top: 0;
+	right: 25px;
+	
+	height: 37px;
+	
+	font-size: 14px;
+	
+	padding: 9px 0;
+}
+
+
+.centered .f2x-input {
+	padding: 0;
+}
+
+
+
+.f2x-input-normal input {
+	background-color: #fefefe;
+	border: solid 1px #c8c8c8;
+}
+
+
+.f2x-input-full {
+	padding-left: 0;
+	padding-right: 0;
+}
+.f2x-input-full-icon {
+	width: 100%;
+}
+.f2x-input-small {
+	font-size: 11px;
+}
+
+
+
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	.f2x-small label {
+		font-size: 9px !important;
+	}
+}

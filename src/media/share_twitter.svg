@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>share_twitter</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="25" cy="25" r="25"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="50" height="50" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Artboards" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="S1_Configured_Viewer_Share" transform="translate(-890.000000, -649.000000)">
+            <g id="S1_Exercises_Modal_Share-Preconfigured" transform="translate(452.000000, 261.000000)">
+                <g id="Share-via-Social-Media" transform="translate(308.000000, 351.000000)">
+                    <g id="share_twitter" transform="translate(130.000000, 37.000000)">
+                        <use id="Oval-4" stroke="#5A5A5A" mask="url(#mask-2)" stroke-width="2" fill="#FEFEFE" xlink:href="#path-1"></use>
+                        <g id="Social---Twitter---Dark" transform="translate(13.000000, 13.000000)" fill="#5A5A5A">
+                            <path d="M16.801,6.832 C16.332,7.04 15.824,7.184 15.293,7.247 C15.836,6.922 16.25,6.407 16.449,5.793 C15.941,6.094 15.379,6.313 14.777,6.43 C14.301,5.922 13.617,5.602 12.863,5.602 C11.414,5.602 10.238,6.778 10.238,8.227 C10.238,8.434 10.262,8.633 10.305,8.825 C8.121,8.715 6.188,7.672 4.891,6.082 C4.664,6.469 4.535,6.922 4.535,7.403 C4.535,8.313 5,9.118 5.703,9.586 C5.273,9.575 4.871,9.454 4.516,9.258 L4.516,9.29 C4.516,10.563 5.422,11.625 6.621,11.868 C6.402,11.926 6.168,11.957 5.93,11.957 C5.762,11.957 5.598,11.942 5.434,11.911 C5.77,12.954 6.738,13.711 7.887,13.735 C6.988,14.438 5.855,14.856 4.625,14.856 C4.414,14.856 4.207,14.844 4,14.821 C5.164,15.567 6.543,16 8.027,16 C12.855,16 15.496,12 15.496,8.532 L15.488,8.192 C16.004,7.821 16.449,7.36 16.801,6.832 Z" id="twitter"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

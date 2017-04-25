@@ -1,0 +1,21 @@
+.f2x-try-text {
+	width: 425px;
+	
+	margin: 35px auto 50px auto;
+	
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-try-text {
+		width: 90%;
+	}
+}

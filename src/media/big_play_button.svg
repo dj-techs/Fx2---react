@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Play Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="50" cy="50" r="50"></circle>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Video-Player-+-Info" transform="translate(-409.000000, -207.000000)">
+            <g id="Play-Button" transform="translate(410.000000, 208.000000)">
+                <g id="Oval">
+                    <use fill-opacity="0.5" fill="#919191" fill-rule="evenodd" style="mix-blend-mode: multiply;" xlink:href="#path-1"></use>
+                    <use stroke="#FFFFFF" stroke-width="1" xlink:href="#path-1"></use>
+                </g>
+                <path d="M54.4541443,30.3887914 C54.7556121,29.9198415 55.2396123,29.9124127 55.5458557,30.3887914 L79.4745525,67.6112086 C79.7760203,68.0801585 79.5725171,68.4603175 79.0208239,68.4603175 L30.9791761,68.4603175 C30.427121,68.4603175 30.2192041,68.0875873 30.5254475,67.6112086 L54.4541443,30.3887914 Z" id="Triangle-Copy" fill="#FFFFFF" fill-rule="evenodd" transform="translate(55.000000, 49.000000) rotate(-270.000000) translate(-55.000000, -49.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

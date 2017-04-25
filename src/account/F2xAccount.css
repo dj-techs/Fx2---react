@@ -1,0 +1,21 @@
+.f2x-account {
+	margin: 55px auto 0 auto;
+	
+	width: 907px;
+}
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-account {
+		margin: 0;
+		
+		width: 100%;
+		height: 100%;
+		
+		position: relative;
+		
+		z-index: 201;
+	}
+}

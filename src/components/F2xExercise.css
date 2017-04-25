@@ -1,0 +1,278 @@
+.f2x-exercise {
+	display: inline-block;
+	
+	padding: 0 18px 35px 0;
+	
+	width: 218px;
+}
+.f2x-exercise:nth-child(4n+4) {
+	padding-right: 0;
+}
+
+
+
+.f2x-exercise .f2x-exercise-img {
+	position: relative;
+	
+	width: CALC(100% - 2px);
+	height: 121px;
+	
+	margin: 0 0 8px 0;
+	
+	border: solid 1px #B2B2B2;
+}
+.f2x-exercise .f2x-exercise-img .f2x-exercise-img-padding {
+	padding: 7px;
+}
+
+.f2x-exercise .f2x-exercise-img .f2x-exercise-img-padding .f2x-exercise-img-labels {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	font-size: 12px;
+	
+	border-width: 0;
+	border-radius: 2px;
+	
+	margin-left: 6px;
+	
+	padding: 4px 6px 3px 7px;    
+	
+	float: right;
+}
+.f2x-exercise .f2x-exercise-img .f2x-exercise-img-padding .f2x-exercise-img-labels-intensity {
+	font-size: 14px;
+	
+	width: 22px;
+	
+	text-align: center;
+	
+	padding: 2px 0;
+}
+
+.f2x-exercise .f2x-exercise-img .f2x-exercise-img-play {
+	position: absolute;
+	
+	width: 60px;
+	height: 30px;
+	
+	left: 6px;
+	bottom: 5px;
+
+	display: none;
+}
+.f2x-exercise .f2x-exercise-img:hover .f2x-exercise-img-play {
+	display: block;
+}
+
+.f2x-exercise .f2x-exercise-img .f2x-exercise-add {
+	position: absolute;
+	
+	width: 26px;
+	height: 20px;
+	
+	background-size: 28px;
+	background-position: 8px 4px;
+	
+	right: 0;
+	bottom: 0;
+	
+	padding: 5px 6px;
+	
+	background-color: white;
+	
+	border-radius: 12px 0 0 0;
+}
+
+
+
+
+.f2x-exercise .f2x-exercise-name {
+	font-size: 15px;
+	color: #414141;
+}
+
+.f2x-exercise .f2x-exercise-name .f2x-exercise-settings {
+	float: right;
+	
+	display: none;
+}
+
+.f2x-exercise:hover .f2x-exercise-name .f2x-exercise-settings {
+	display: block;
+}
+
+
+
+.f2x-exercise .f2x-exercise-info, .f2x-exercise .f2x-exercise-info a {
+	margin-top: 2px;
+	
+	font-size: 12px;
+	color: #969696;
+}
+
+.f2x-exercise .f2x-exercise-info .f2x-exercise-trainer {
+	margin-right: 8px;
+	
+	float: left;
+}
+.f2x-exercise .f2x-exercise-info .f2x-exercise-trainer:after {
+    content: "|";
+    margin-left: 8px;
+}
+
+.f2x-exercise .f2x-exercise-info .f2x-exercise-time {
+	margin-right: 8px;
+	
+	float: left;
+}
+.f2x-exercise .f2x-exercise-info .f2x-exercise-time:after {
+    content: "|";
+    margin-left: 8px;
+}
+
+.f2x-exercise .f2x-exercise-info .f2x-exercise-cal {
+	margin-right: 8px;
+	
+	float: left;
+}
+.f2x-exercise .f2x-exercise-info .f2x-exercise-cal:after {
+    content: " cal";
+}
+
+
+
+.f2x-video-settings {
+	width: 161px;
+	width: 224px;
+	/*height: 62px;*/
+	background-color: #ffffff;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
+	border: solid 1px #969696;
+	position: absolute;
+	
+	right: 7px;
+	
+	z-index: 55;
+}
+.f2x-video-settings ul {
+	list-style: none;
+	
+	padding: 0;
+	margin: 13px 0 0 15px;
+	
+	font-size: 13px;
+}
+
+.f2x-video-settings ul li {
+	list-style: none;
+	
+	padding: 0 0 8px 0;
+	margin: 0;
+}
+.f2x-video-settings ul li img {
+	float: left;
+	
+	margin: 1px 10px 0 0;
+}
+
+.f2x-exercise-settings-img {
+	padding: 0 8px;
+}
+
+
+.f2x-intensity-mobile {
+	margin-top: 3px;
+}
+
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+	.f2x-exercise:nth-child(4n+4) {
+		padding-right: 15px;
+	}
+	.f2x-exercise:nth-child(3n+3) {
+		padding-right: 0;
+	}	
+}
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+
+	.f2x-exercise .f2x-exercise-name .f2x-exercise-settings {
+		display: block;
+	}
+	
+	.f2x-exercise-list {
+		background: #eee;
+	}
+	.f2x-exercise {
+		width: 46%;
+		padding: 0 0 5px 0;
+		    
+		margin: 10px 2%;
+		
+		background: #fff;
+		
+		border-radius: 4px;
+		
+		box-shadow: 0 1px 4px rgba(0,0,0,.3);
+		
+		overflow: hidden;
+	}
+	.f2x-exercise .f2x-exercise-img {
+		width: 100%;
+	}
+	.f2x-exercise .f2x-exercise-img .f2x-exercise-img-padding {
+		padding: 0;
+	}
+	.f2x-exercise .f2x-exercise-img .f2x-exercise-img-padding .f2x-exercise-img-labels {
+		border-radius: 0;
+	}
+	.f2x-exercise .f2x-exercise-name {
+		font-size: 13px;
+		margin-left: 7px;
+	}
+	.f2x-exercise .f2x-exercise-info, .f2x-exercise .f2x-exercise-info a{
+		font-size: 10px;
+		margin-left: 4px;
+	}
+	
+	
+	.f2x-exercise .f2x-exercise-info .f2x-exercise-trainer {
+		margin-right: 5px;
+		margin-left: 3px;
+		
+		float: none;
+	}
+	.f2x-exercise .f2x-exercise-info .f2x-exercise-trainer:after {
+	    margin-left: 5px;
+		content: "";
+	}
+	
+	.f2x-exercise .f2x-exercise-info .f2x-exercise-time {
+		margin-right: 5px;
+		margin-top: 10px;
+		
+		float: right;
+	}
+	.f2x-exercise .f2x-exercise-info .f2x-exercise-time:after {
+	    margin-left: 5px;
+	}
+	
+	.f2x-exercise .f2x-exercise-info .f2x-exercise-cal {
+		margin-right: 5px;
+		margin-top: 10px;
+		float: right;
+	}
+	.f2x-exercise .f2x-exercise-img .f2x-exercise-img-play {
+		display: block;
+	}
+}
+ 
+/* Móviles en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

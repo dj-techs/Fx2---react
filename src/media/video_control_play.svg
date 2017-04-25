@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="20px" viewBox="0 0 16 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>video_control_play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Video-Player-+-Info" transform="translate(-31.000000, -480.000000)" fill="#FFFFFF">
+            <g id="Video-Player-VD" transform="translate(0.000000, -1.000000)">
+                <polygon id="video_control_play" transform="translate(38.785714, 491.010204) rotate(-270.000000) translate(-38.785714, -491.010204) " points="38.7857143 483.22449 48.7959184 498.795918 28.7755102 498.795918"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

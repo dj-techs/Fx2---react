@@ -1,0 +1,134 @@
+.f2x-preconfigure-workout {
+	width: 928px;
+	
+	margin: 10px auto 0 auto;
+}
+
+.f2x-workout-title {
+	padding: 0;
+	
+	display: block;
+}
+.f2x-workout-title-text {
+	float: left;
+}
+
+.f2x-preconfigure-workout-list {
+	width: 100%;
+	
+	margin: 60px auto 0 auto;
+}
+.f2x-preconfigure-workout-list .circ-wo-list-item {
+	width: 232px;
+}
+.f2x-preconfigure-workout .img-cont {
+	width: 165px;
+	height: 165px;
+	
+	margin: 0 auto;
+}
+.f2x-preconfigure-workout .info {
+	margin-bottom: 20px;
+}
+.f2x-preconfigure-workout-list .info {
+	margin-top: 10px;
+}
+
+
+
+.f2x-workout-group {
+	padding: 20px 0 0 0;
+}
+
+
+
+.f2x-creator-name {
+	font-size: 12px;
+	text-align: center;
+	line-height: 38px;
+	
+	border-bottom: solid 1px #c3c3c3;
+	
+	width: 100%;
+	height: 38px;
+	
+	position: fixed;
+	
+	top: 51px;
+	left: 0;
+	
+	z-index: 199;
+	
+	background: #fff;
+	
+	transition: all .3s ease-in-out;
+}
+
+
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-preconfigure-workout {
+		width: 100%;
+	}
+	
+	.f2x-workout-title {
+		display: none;
+	}
+	.f2x-preconfigure-workout-list {
+		padding-top: 20px;
+	}
+	.f2x-preconfigure-workout-list .circ-wo-list-item {
+		width: 50%;
+		height: 215px;
+		
+		float: left;
+	}
+	.f2x-preconfigure-workout-list .img-cont {
+		width: 130px;
+		height: 130px;
+		
+		margin: 0 auto;
+		
+		float: none;
+	}
+		
+	.f2x-preconfigure-workout-list .info {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		width: 100%;
+		
+		float: none;
+	}
+		
+	.f2x-preconfigure-workout-list .info .iblock {
+		float: none;
+		display: block;
+		width: auto;
+	}
+		
+	.f2x-preconfigure-workout-list .info .iblock div {
+		float: none;
+		margin: 0;
+		width: auto;
+	}
+		
+	.f2x-preconfigure-workout-list .info .iblock .label {
+		float: none;
+		margin: 0;
+		width: auto;
+		
+		font-size: 13px;
+	}
+		
+	.f2x-preconfigure-workout-list .info .iblock .trainer {
+		float: none;
+		margin: 0;
+		width: auto;
+		
+		font-size: 11px;
+	}
+}

@@ -1,0 +1,35 @@
+.f2x-contact {
+	max-width: 410px;
+	
+	margin: 0 auto;
+}
+
+
+.f2x-info-subtitle-2 {
+	font-size: 18px;
+	
+	margin: 50px 0 0;
+}
+.f2x-info-subtitle-2 small {
+	display: inline-block;
+    margin: 18px 0;
+}
+
+
+	
+.f2x-info-subinfo-text {
+	color: #969696;
+	font-weight: 300;
+	font-size: 14px;
+	text-align: justify;
+	
+	margin: 25px 0 30px;
+}
+
+.f2x-contact-infoMsg {
+	height: 35px;
+	
+	line-height: 35px;
+	font-weight: 300;
+	font-size: 14px;
+}

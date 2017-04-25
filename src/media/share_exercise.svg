@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Button: Share Exercise</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Button:-Share-Exercise">
+            <ellipse id="Oval-2" fill="#414141" cx="51.4166715" cy="10.4001342" rx="9" ry="9"></ellipse>
+            <ellipse id="Oval-2-Copy" fill="#414141" cx="49.8168057" cy="50.9232721" rx="9" ry="9"></ellipse>
+            <ellipse id="Oval-2-Copy-2" fill="#414141" cx="10.3607475" cy="31.6129984" rx="9" ry="9"></ellipse>
+            <path d="M10.5981291,31.8503799 L50.8896978,51.9961643" id="Line" stroke="#414141" stroke-linecap="square"></path>
+            <path d="M10.5981291,31.8503799 L50.8896978,11.7045955" id="Line" stroke="#414141" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

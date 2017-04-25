@@ -1,0 +1,243 @@
+.f2x-account .mobile {
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	height: 100%;
+	
+	background: white;
+	
+	z-index: 201;
+	
+	overflow: auto;
+	
+}
+
+.f2x-account .f2x-mobileSettings-header {
+	height: 50px;
+	
+	border-bottom: solid 2px rgb(195,195,195);
+	
+	text-align: center;
+	
+	position: relative;
+}
+
+.f2x-account .f2x-mobileSettings-header div {
+	padding-top: 17px;
+}
+.f2x-account .mobile .close {
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	padding: 13px 15px 12px 15px;
+}
+
+.f2x-account .mobile .avatar {
+	border-radius: 50%;
+	
+	overflow: hidden;
+	
+	margin: 45px auto 0 auto;
+	
+	width: 130px;
+	height: 130px;
+	
+	position: relative;
+}
+.f2x-account .mobile .avatar span {
+	position: absolute;
+	
+	width: 100%;
+	
+	text-align: center;
+	bottom: 8px;
+	left: 0;
+	
+	color: #FFF;
+	font-size: 14px;
+	
+}
+.f2x-account .mobile .userName {
+	font-size: 12px;
+	
+	margin-top: 8px;
+}
+
+.f2x-account .mobile ul {
+	list-style: none;
+	
+	padding: 0;
+	margin: 35px 0 0 0;
+	
+	text-align: left;
+	font-size: 12px;
+}
+.f2x-account .mobile ul li {
+	border-top: solid 1px #eee;
+	
+	padding: 15px 10px 15px 35px;
+}
+.f2x-account .mobile ul li:last-child {
+	border-bottom: solid 1px #eee;
+}
+
+.f2x-account .mobile .accountBottom {
+	position: absolute;
+	
+	bottom: 0;
+	left: 0;
+	
+	width: 100%;
+	
+	padding: 25px 0;
+	
+	text-align: center;
+	
+	font-size: 12px;
+}
+
+.f2x-account .mobile .signOut {
+	padding: 15px 0 0;
+	
+	font-size: 11px;
+}
+
+
+
+
+
+
+
+.f2x-account-top {
+	width: 100%;
+	height: 50px;
+
+	border-bottom: 2px solid #c3c3c3;
+	
+	text-align: center;
+	
+	font-size: 16px;
+}
+
+.f2x-account-content {
+	margin: 20px 15px;
+	
+	min-height: 400px;
+	height: 100%;
+	
+	position: relative;
+}
+
+.f2x-account-top .back {
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	width: 20px;
+	height: 20px;
+	
+	background-color: transparent !important;
+	background-size: 20px 20px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	padding: 15px 20px;
+}
+
+.f2x-account-top span {
+	display: inline-flex;
+	
+	margin-top: 15px;
+}
+
+
+
+.f2x-account .mobile .float-l {
+	display: block;
+	width: 46%;
+}
+.f2x-account .mobile .float-r {
+	display: block;
+	width: 46%;
+}
+
+.alignButton {
+	position: absolute;
+	
+	bottom: 20px;
+	left: 50%;
+	
+	margin-left: -60px;
+}
+.alignButton button {
+	background: #414141;
+	
+	padding: 10px 40px;
+	
+	font-size: 14px;
+}
+
+.f2x-account-content .f2x-account-input, .f2x-account-content .f2x-account-email {
+	font-size: 10px;
+	
+	margin-bottom: 25px;
+}
+.f2x-account-content .f2x-account-email-dir {
+	font-size: 12px;
+}
+.f2x-account-content .f2x-account-email-dir .f2x-account-email-change {
+	float: right;
+}
+
+.f2x-account-content .f2x-account-saves {
+	text-align: center;
+}
+.f2x-account-content .f2x-account-saves button {
+	margin: 40px auto 20px auto;
+	
+	background: #414141;
+	
+	padding: 10px 40px;
+	
+	font-size: 14px;
+}
+
+
+
+.f2x-billing-cvv-mobile {
+	top: -42px;
+    left: auto;
+    right: 40px;
+    bottom: auto;
+    width: 220px;
+}
+
+.f2x-billing-cvv-mobile:before {
+    top: 50%;
+    margin-top: -17px;
+    left: auto;
+    right: -21px;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 20px solid #969696;
+    
+    border-right: solid 1px transparent
+} 
+.f2x-billing-cvv-mobile:after {
+    top: 50%;
+    margin-top: -17px;
+    left: auto;
+    right: -20px;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 20px solid #fff;
+    
+    border-right: solid 1px transparent
+} 
+

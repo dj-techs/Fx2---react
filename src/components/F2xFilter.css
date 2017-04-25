@@ -1,0 +1,11 @@
+.f2x-filter-button-group button {
+	margin: 0 4px 5px 0;
+}
+.f2x-filter-button-group:last-child {
+	margin: 0 0 5px 0;
+}
+
+.f2x-filter-label {
+	color: #414141;
+	font-size: 11px;
+}

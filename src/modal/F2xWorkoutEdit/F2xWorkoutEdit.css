@@ -1,0 +1,32 @@
+.f2x-edit-workout{
+	width: 135px;
+    height: 80px;
+    
+    float: left;
+}
+
+.btn-workout-edit {
+	color: #6b6b6b;
+	width: 100%;
+	
+	text-align: right;
+
+	margin: 0 0 45px 0;
+}
+
+
+
+
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.btn-workout-edit {
+		width: 100%;
+	
+		margin: 0 auto 45px auto;
+		
+		text-align: center;
+	}
+}

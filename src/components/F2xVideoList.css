@@ -1,0 +1,311 @@
+.f2x-vList .f2x-video {
+	width: 922px;
+	
+	margin: 0 auto;
+	
+	position: relative;
+	
+	z-index: 70;
+}
+
+.f2x-vList .f2x-video .f2x-video-box {
+	top: 0;
+	
+	z-index: 70;
+}
+
+
+
+.f2x-vList .f2x-video .f2x-video-show-list {
+	text-align: center;
+	
+	font-size: 12px;
+	
+	border-bottom: 1px solid #969696;
+	
+	z-index: 71;
+	
+	position: relative;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-show-more {
+	padding: 8px 0 6px 0;
+}
+
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider {
+	white-space: nowrap;
+	
+	text-align: left;
+	
+	overflow: auto;
+}
+
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item {
+	display: inline-block;
+	
+	opacity: .3;
+	
+	transition:all .3s ease-in-out;
+}
+
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-videos-item-image {
+	width: 154px;
+	height: 109px;
+	
+	overflow: hidden;
+	
+	transition: all .3s ease-in-out;
+}
+
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .view {
+	opacity: .6;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .active {
+	opacity: 1;
+}
+
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .active .f2x-videos-item-image div {
+	width: 154px;
+	height: 109px;
+	
+	transform: scale(1.5);
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: linear-gradient(to bottom, #cecece, #f8f8f8);
+	border-image-slice: 1;
+	
+	padding: 9px 6px;
+	
+	color: #414141;
+	font-family: 'Montserrat', sans-serif;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item:last-child .f2x-video-item-info {
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info .f2x-exercise-name {
+	font-size: 12px;
+	font-weight: 500;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info .f2x-exercise-trainer {
+	font-size: 10px;
+	color: #969696;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info .f2x-exercise-info {
+	font-size: 10px;
+	color: #969696;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info .f2x-exercise-grouped {
+	font-size: 10px;
+	
+	margin-top: 5px;
+	
+	color: #5a5a5a;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info .f2x-exercise-grouped .f2x-video-labels {
+	background: #666666;
+	
+	color: #fff;
+	
+	border: 0;
+	padding: 4px 6px;
+	margin: 0;
+	
+	border-radius: 2px;
+	
+	margin: 2px 0 0 5px;
+}
+.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info .f2x-exercise-grouped .f2x-video-labels:first-child {
+	margin: 2px 0 0 0;
+}
+
+
+.f2x-vList .f2x-video .f2x-video-title {
+	font-size: 28px;
+	color: #414141;
+	
+	margin-top: 15px;
+	margin-bottom: 5x;
+}
+.f2x-vList .f2x-video .f2x-video-title button {
+	float: right;
+	
+	margin-left: 5px;
+}
+.f2x-vList .f2x-video .f2x-video-info {
+	font-size: 12px;
+	color: #5a5a5a;
+	
+	margin-top: 2px;
+}
+.f2x-vList .f2x-video .f2x-video-labels {
+	font-size: 11px;
+	color: #5a5a5a;
+	
+	margin-top: 7px;
+	margin-bottom: 17px;
+}
+.f2x-vList .f2x-video .f2x-label-content {
+	display: inline-block;
+	
+	margin: 0 30px 0 8px;
+}
+.f2x-vList .f2x-video .f2x-label-content .f2x-muscle-labels {
+	display: inline-block;
+	
+	background: #666666;
+	
+	color: #fff;
+	font-size: 12px;
+	
+	margin: 0 5px 0 0;
+	padding: 3px 10px 2px;
+	
+	border-radius: 2px;
+}
+
+
+.f2x-vList .f2x-video .f2x-wardrope {
+	display: inline;
+	
+	padding-bottom: 7px;
+}
+
+
+.f2x-vList .f2x-video .f2x-video-userdata {
+	margin: 0;
+	padding: 12px 0 5px;
+	
+	font-size: 13px;
+	text-transform: capitalize;
+	
+	border-top: 1px solid #eee;
+}
+.f2x-vList .f2x-video .f2x-createdBy {
+	font-weight: 300;
+	
+	margin-bottom: 14px;
+}
+.f2x-vList .f2x-video .f2x-video-userdata .avatImg {
+	width: 25px;
+	height: 25px;
+	
+	border-radius: 50%;
+	
+	float: left;
+	
+	margin: -4px 11px 0 0;
+}
+
+
+
+.f2x-video-goBack {
+	position: absolute;
+	
+	top: 12px;
+	left: 12px;
+	
+	width: 20px;
+	height: 20px;
+	
+	
+	z-index: 202;
+	
+	background-size: 20px 20px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+
+.f2x-repo-counter {
+	float: right;
+	
+	color: #969696;
+	
+	font-size: 18px;
+}
+
+
+
+.f2x-list-shadow {
+	box-shadow: inset 0 -8px 6px -6px rgba(0,0,0,.2);
+}
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-repo-counter {
+		margin-right: 15px;
+	}
+	
+	.f2x-vList .f2x-video .f2x-video-userdata {
+		margin: 0 15px;
+	}
+	.f2x-vList .f2x-video .f2x-video-userdata .avatImg {
+		width: 44px;
+		height: 44px;
+		
+		margin: -12px 11px 0 0;
+	}
+		
+	.f2x-vList .f2x-video {
+		width: 100%;
+		
+		z-index: 201;
+	}
+	.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-video-item-info {
+		display: none;
+	}
+	.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .f2x-videos-item .f2x-videos-item-image {
+		width: 70px;
+		height: 70px;
+	}
+	.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider .active .f2x-videos-item-image div {
+		width: 70px;
+		height: 70px;
+	}
+	.f2x-vList .f2x-video .f2x-video-title {
+		font-size: 18px;
+		margin-left: 15px;
+	}
+	.f2x-vList .f2x-video .f2x-video-title button {
+		display: none;
+	}
+	.f2x-vList .f2x-video .f2x-video-info {
+		font-size: 10px;
+		margin-left: 15px;
+		margin-right: 15px;
+		padding-bottom: 10px;
+		
+		border-bottom: 1px solid #eee;
+	}
+	.f2x-vList .f2x-video .f2x-video-labels {
+		margin-left: 15px;
+	}
+	.f2x-vList .f2x-video .f2x-label-content .f2x-muscle-labels {
+		font-size: 10px;
+	
+		margin: 0 5px 0 0px;
+		padding: 2px 8px 2px;
+	}
+	.f2x-vList .f2x-video .f2x-label-content {
+		margin-left: 0;
+		margin-bottom: 15px;
+		margin-top: 5px;
+		
+		display: block;
+	}
+	.f2x-vList .f2x-video .f2x-video-show-list .f2x-video-show-list-items .f2x-videos-item-slider {
+		margin-bottom: -4px;
+	}
+	.f2x-vList .f2x-video .f2x-video-show-list {
+		border-width: 0;
+	}
+}
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

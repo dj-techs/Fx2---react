@@ -1,0 +1,302 @@
+.f2x-exercise-l {
+	width: 1448px;
+	
+	margin: 0 auto;
+}
+
+
+.f2x-exercise-l .f2x-exercise-filter {
+	width: 260px;
+	
+	margin-top: 225px;
+	
+	float: left;
+}
+
+.f2x-exercise-l .f2x-exercise-filter .f2x-exercise-filter-inter {
+	padding: 0 55px 0 39px;
+}
+
+
+.f2x-exercise-l .f2x-exercise-list {
+	width: 943px;
+	min-height: 1px;
+	
+	margin-top: 0px;
+	
+	float: left;
+}
+.f2x-exercise-items {
+	position: relative;
+	
+	top: 75px;
+}
+.f2x-exercise-l .f2x-exercise-list .f2x-exercise-list-title {
+	padding-top: 25px;
+	padding-bottom: 10px;
+	
+	position: absolute;
+	
+	width: 100%;
+	
+	top: 0;
+	left: 0;
+	
+	background: rgba(255,255,255,.96);
+	
+	z-index: 10;
+}
+
+
+.f2x-exercise-l .f2x-exercise-sort {
+	float: right;
+	
+	margin: -5px 17px 0 0;
+}
+.f2x-exercise-l .f2x-exercise-sort .f2x-sort-label {
+	padding: 0 !important;
+}
+
+
+
+.f2x-exercise-l .f2x-mobile-filters {
+	position: fixed;
+	
+	top: 0;
+	right: 0;
+	
+	padding: 9px 10px 6px;
+	
+	z-index: 200;
+}
+
+
+.f2x-filter-top-menu {
+	background: #eee;
+	
+	height: 45px;
+	
+	border-bottom: 1px solid #ccc;
+}
+.f2x-filter-content {
+	padding: 15px 0;
+}
+.f2x-filter-content .f2x-filter-label {
+	border-bottom: solid 1px #eee;
+	
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.f2x-filter-content .f2x-filter-label:last-child {
+	border-width: 0;
+}
+.f2x-filter-content .f2x-filter-label div:first-child {
+	float: left;
+}
+.f2x-filter-content .f2x-filter-label div div:first-child {
+	float: none;
+}
+.f2x-filter-content .f2x-filter-label .f2x-dropdown, .f2x-filter-content .f2x-exercise-sort .f2x-dropdown {
+	float: right;
+	
+	width: 40%;
+	
+	border-width: 0;
+	
+	text-align: right;
+	
+	padding-right: 30px;
+	
+	margin: -6px 0 0 0 !important;
+}
+.f2x-filter-content .f2x-filter-label .f2x-dropdown .f2x-dropdown-list-option, .f2x-filter-content .f2x-exercise-sort .f2x-dropdown .f2x-dropdown-list-option {
+	text-align: left;
+}
+.f2x-filter-content .f2x-filter-label .f2x-filter-button-group {
+	width: 100%;
+	
+	display: inline-block;
+}
+.f2x-filter-content .f2x-filter-label .f2x-filter-button-group button {
+	padding: 12px 15px;
+}
+.f2x-filter-content .f2x-filter-intensity button {
+	padding: 12px 0;
+	
+	width: 32%;
+}
+
+.f2x-filter-content .f2x-exercise-sort {
+	float: none;
+	
+	padding: 0 15px;
+	margin: 0 0 15px 0;
+	border-bottom: solid 1px #eee;
+}
+.f2x-filter-content .f2x-exercise-sort .f2x-sort-label {
+	margin-bottom: 15px;
+	
+	display: inline-block;
+}
+
+
+.f2x-option-content {
+	padding: 0;
+}
+
+.f2x-option-content .cancelBtn2 {
+    background: #eee;
+    color: #414141;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.f2x-option-content ul {
+    margin: 0 !important;
+}
+
+.f2x-option-content img {
+	vertical-align: middle;
+	
+	margin-right: 6px;
+}
+	
+
+.f2x-myworkout-titleBar {
+	background: #eee;
+    
+    color: #414141;
+    font-size: 13px;
+    text-align: center;
+    
+    padding: 14px 0;
+    
+    border-bottom: 1px solid #ccc;
+    
+    position: relative;
+}
+
+.f2x-myworkout-titleBar img {
+	position: absolute;
+	
+	top: 13px;
+	left: 15px;
+}
+
+
+.f2x-myworkout-info {
+	text-align: center;
+	color: #FC5454;
+	font-weight: 300;
+	
+	font-size: 15px;
+	
+	padding: 10px 0 0px;
+}
+
+.f2x-myworkout-settings-search {
+	position: absolute;
+	
+	top: 123px;
+	left: 2%;
+	
+	width: 20px;
+}
+
+.f2x-myworkout-slc {
+	list-style: none;
+	
+	padding: 0 !important;
+	
+	width: 80%;
+	height: 136px;
+	
+	margin: 20px 10% 0 !important;
+	
+	border-right: #ccc solid 2px;
+	
+	overflow: auto;
+}
+.f2x-myworkout-slc li {
+	padding: 8px 0 !important;
+	margin: 0 !important;
+	
+	border: 0 !important;
+}
+
+
+.f2x-accept-message {
+	background: #fff;
+	
+	position: absolute;
+	
+	top: 50%;
+	left: 8%;
+	
+	width: 84%;
+	height: 260px;
+	
+	margin-top: -130px;
+	
+	text-align: center;
+}
+
+.f2x-accept-message .f2x-modal-title {
+	padding-top: 25px;
+}
+
+.f2x-accept-message .footer-link-sign {
+	padding: 8px 0 15px;
+	
+	font-size: 12px;
+}
+
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+	.f2x-exercise-l .f2x-exercise-list {
+		width: 696px;
+	}
+	
+}
+ 
+ 
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {	
+	.f2x-exercise-items {
+		position: relative;
+		
+		top: 90px;
+	}
+	.f2x-exercise-items div:first-child div:first-child {
+		padding-top: 0 !important;
+	}
+	.f2x-exercise-l .f2x-exercise-filter {
+		display: none;
+	}
+	.f2x-exercise-l {
+		width: 100%;
+	}
+	.f2x-exercise-l .f2x-exercise-list {
+		width: 100%;
+		margin-top: 0;
+	}
+	.f2x-exercise-l .f2x-exercise-list .clear {
+		height: 95px;
+	}
+	.f2x-exercise-l .f2x-exercise-list .f2x-exercise .clear {
+		height: 0;
+	}
+	.f2x-exercise-l .f2x-exercise-list .f2x-exercise-list-title {
+		display: none;
+	}
+}
+ 
+/* Móviles en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

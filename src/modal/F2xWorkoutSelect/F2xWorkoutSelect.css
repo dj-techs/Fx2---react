@@ -1,0 +1,15 @@
+.f2x-woe-error-msg {
+	color: red !important;
+	position: absolute;
+	top:80px;
+	left:90px;
+	
+	right:90px;
+	height:18px;
+	line-height: 19px;
+	
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 12px;
+	
+}

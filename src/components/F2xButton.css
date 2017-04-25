@@ -1,0 +1,217 @@
+button {
+	letter-spacing: 1.5px !important;
+	font-size: 12px;
+}
+
+.f2x-button {
+	background-color: #414141;
+	
+	font-style: normal;
+	font-stretch: normal;
+	text-align: center;
+	
+	color: white;
+	
+	border: solid 1px #414141;
+	
+	padding: 4px 24px;
+	
+	cursor: pointer;
+}
+
+.f2x-button-white {
+	background-color: transparent;
+	
+	color: #414141;
+}
+
+
+.f2x-button-blue {
+	background-color: transparent;
+	
+	color: #0278d0;
+	
+	border-color: #0278d0;
+}
+
+.f2x-button-black {
+	background-color: #4a4a4a;
+	
+	color: white;
+	
+	border-color: #4a4a4a;
+}
+
+.f2x-button-grey-invert {
+	background-color: transparent;
+	
+	color: #969696;
+	
+	border-color: #969696;
+}
+
+.f2x-button-black-invert {
+	background-color: transparent;
+	
+	color: #5a5a5a;
+	
+	border-color: #5a5a5a;
+}
+
+.f2x-button-transparent {
+	background-color: transparent;
+	
+	color: #5a5a5a;
+	text-decoration: underline;
+	
+	border-color: transparent;
+}
+.f2x-button-transparent-none {
+	background-color: transparent;
+	
+	color: #5a5a5a;
+	
+	border-color: transparent;
+}
+
+
+
+
+
+.f2x-button-new {
+	font-family: 'Montserrat', 'Open Sans', sans-serif;
+	
+	font-size: 11px;
+	
+	padding: 8px 30px;
+} 
+
+
+
+.f2x-button-small-border {
+	border-width: 1px;
+}
+
+.f2x-button-small-width {
+	padding: 6px 21px;
+}
+
+
+
+
+
+
+
+
+.f2x-button-big {
+	font-size: 16px;
+	
+	padding: 7px 20px;
+}
+
+.f2x-button-medium {
+	font-size: 13px;
+	
+	padding: 4px 21px;
+	
+	border-width: 1px;
+}
+
+.f2x-button-small {
+	font-size: 11px;
+	
+	padding: 4px 5px;
+	
+	border-width: 1px;
+}
+
+
+
+
+
+
+
+.f2x-new-button-black {
+	background: #222;
+	
+	padding: 0;
+	
+	border-color: #222;
+	
+	font-size: 12px;
+	color: white;
+	
+}
+
+.f2x-new-button-white {
+	background: #fff;
+	
+	padding: 0;
+	
+	border-color: #fff;
+	
+	font-size: 12px;
+	color: #222;
+	
+}
+.f2x-new-button-black-invert {
+	background: transparent;
+	
+	padding: 0;
+	
+	border-color: #222;
+	
+	font-size: 12px;
+	color: #222;
+	
+}
+.f2x-new-button-black2-invert {
+	background: transparent;
+	
+	padding: 0;
+	
+	border-color: #414141;
+	
+	font-size: 12px;
+	color: #414141;
+	
+}
+.f2x-new-button-grey-invert {
+	background: transparent;
+	
+	padding: 0;
+	
+	border-color: #c8c8c8;
+	
+	font-size: 12px;
+	color: #969696;
+	
+}
+.f2x-new-button-transparent {
+	background: transparent;
+	
+	padding: 0;
+	
+	border-width: 0;
+	
+	font-size: 12px;
+	color: #222;
+	
+}
+
+
+.f2x-loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #222; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

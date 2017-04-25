@@ -1,0 +1,105 @@
+.workout-try-buttons {
+	position: absolute;
+	
+	top: 0px;
+	right: 0px;
+	
+	background: #fcfcfc;
+	
+	width: 40px;
+	height: 90px;
+	
+	text-align: center;
+}
+.workout-try-buttons img:first-child {
+	margin-top: 15px;
+}
+.workout-try-buttons img {
+	margin-top: 10px;
+}
+
+
+.f2x-workout-save-buttons {
+	float: right;
+}
+
+.f2x-workout-builder-use {
+	position: relative;
+    display: inline-block;
+    
+    float: none !important;
+	
+	width: auto !important;
+	
+	vertical-align: top !important;
+	
+	margin-left: 25px;
+	padding-right: 25px;
+}
+
+
+.f2x-new-workout-datas {
+	float: left;
+	
+	color: #222;
+	font-size: 14px;
+	
+	padding-top: 7px;
+}
+.f2x-new-workout-datas .f2x-new-workout-name {
+	color: #969696;
+	font-size: 16px;
+	font-style: italic;
+	
+	float: left;
+	
+	margin: -3px 0 0 0;
+	padding: 0 5px;
+	
+	border: 1px solid transparent;
+	
+	border-radius: 2px;
+	
+	display: inline-flex;
+}
+.f2x-new-workout-datas .f2x-new-workout-name:hover {
+	border-color: #c8c8c8;
+}
+.f2x-new-workout-datas .f2x-new-workout-name:focus {
+	color: #222;
+	border-color: #c8c8c8;
+	font-style: normal;
+	font-family: 'Montserrat', sans-serif !important;
+	
+	padding: 2px 5px;
+	
+	margin-right: 0;
+}
+
+.f2x-new-workout-datas .f2x-new-workout-name-edited {
+	color: #222;
+	font-style: normal;
+	font-family: 'Montserrat', sans-serif !important;
+	
+	padding: 2px 5px;
+	
+	margin-right: 14.5px;
+}
+
+
+
+
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	
+	.f2x-workout-builder-use {
+		margin-right: 45px;
+		
+		
+		height: 70px !important;
+		line-height: 70px !important;
+	}
+	
+}

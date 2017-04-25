@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="30px" viewBox="0 0 31 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="63.4151876%" y1="-36.6486561%" x2="63.4151876%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="WORKOUT-Builder" transform="translate(-462.000000, -344.000000)" fill="url(#linearGradient-1)">
+            <path d="M474.909837,360.432049 L466,360.286603 L479.294442,373.581044 L492.634724,360.240762 L485.742697,360.626132 C485.742697,360.626132 484.82948,361.289949 485.296465,353.613686 C486.231882,338.237372 459.048315,347.133378 462.377159,346.812823 C465.706002,346.492268 475.931439,342.772628 475.756962,356.01109 C475.725145,358.425197 474.909837,360.432049 474.909837,360.432049 Z" id="Path-2" transform="translate(477.364575, 359.061162) scale(1, -1) translate(-477.364575, -359.061162) "></path>
+        </g>
+    </g>
+</svg>

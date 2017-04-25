@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400');
+
+
+@-webkit-keyframes autofill {
+    to {
+        color: #666;
+        background: transparent;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+
+
+/* This used to work for parent element of button divs */
+
+/* But it is not enough now, below dont hide play button parent div */
+
+*::-webkit-media-controls-panel {
+
+}
+
+/* Old shadow dom for play button */
+
+*::--webkit-media-controls-play-button {
+
+}
+
+/* New shadow dom for play button */
+
+/* This one works */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+
+
+
+
+[contenteditable="true"] {				
+    -webkit-user-select: text;
+    user-select: text;
+}	
+				
+				
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+}
+
+
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+
+
+input {
+	border-radius: 0;
+}
+
+
+
+body {
+	left: 0;
+	transition: all .3s ease-in-out;
+}
+
+.App, input, select, button, textarea {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+:focus{
+	outline:0px;
+}
+
+a:visited,
+a:hover,
+a:visited {
+}
+
+.allcaps {
+	text-transform: uppercase;
+}
+
+.active {
+	color: #414141;
+	list-style-type: disc !important;
+}
+.active-normal {
+	color: #414141;
+}
+.active a {
+	color: #414141;
+	text-decoration: none;
+
+}
+
+.inactive {
+	color: #C8C8C8;
+	list-style-type: none !important;
+}
+.inactive a {
+	color: #C8C8C8;
+	text-decoration: none;
+}
+
+
+
+.cursor {
+	cursor: pointer;
+}
+
+
+
+.small-font {
+	font-family: 'Montserrat', 'Open Sans', sans-serif !important;
+}
+.normal-font {
+	font-family: 'Montserrat', sans-serif !important;
+}
+
+.separated {
+	letter-spacing: 1.05px;	
+}
+
+
+
+
+.hr {
+	width: 100%;
+	height: 1px;
+	
+	border-bottom: 1px solid #979797;
+}
+
+
+
+.transparent {
+	background-color: transparent !important;
+}
+
+.reset-link {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.centered {
+	text-align: center;
+}
+
+.iblock{
+	display: inline-block;
+}
+
+.cover-img {
+	background-color: #ccc;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.float-l {
+	float: left;
+}
+.float-r {
+	float: right;
+}
+
+
+.visible {
+	display: block !important;
+}
+.hidden {
+	display: none !important;
+}
+
+
+.disabled {
+	opacity: 0.2 !important;
+	cursor: default !important;
+}
+
+.clear {
+	clear: both;
+}
+
+
+.f2x-content {
+	margin-top: 0;
+}
+
+
+.f2x-section-title {
+	font-size: 15px;
+	color: #222;
+	letter-spacing: 1.05px;	
+}
+
+
+.upper {
+	text-transform: uppercase;
+}
+
+
+.montse_light {
+	font-weight: 300;
+}
+
+
+
+.pc {
+	display: block;
+}
+.pc1 {
+	display: inline;
+}
+.mobile {
+	display: none;
+}
+.mobileInline {
+	display: none;
+}
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-content {
+		margin-top: 52px;
+	}
+	
+	.pc {
+		display: none;
+	}
+	.pc1 {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.mobileInline {
+		display: inline-block;
+	}
+}
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

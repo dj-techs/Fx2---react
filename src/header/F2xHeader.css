@@ -1,0 +1,56 @@
+.f2x-header {
+	background-color: #FFF;
+	
+	height: 71px;
+
+	border-bottom: 4px solid #222;
+	
+	padding: 0;
+	
+	color: #414141;
+  
+	transition: all .3s ease-in-out;
+}
+
+
+
+
+@media (max-width: 1310px) {
+	.f2x-header {
+		padding: 0;
+	}
+}
+
+
+@media (max-width: 1075px) {
+	.f2x-header {
+		padding: 0;
+	}
+}
+
+
+/* Móvil [horizontal] | tablets: [vertical]
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.f2x-header {
+		border-bottom: solid 2px rgb(195,195,195);
+		
+		width: 100%;
+		height: 50px;
+  
+		padding: 0;
+		
+		position: fixed;
+		
+		top: 0;
+		left: 0;
+		
+		z-index: 200;
+	}
+}
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+}

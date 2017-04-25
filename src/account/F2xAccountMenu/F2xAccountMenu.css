@@ -1,0 +1,19 @@
+.f2x-account-menu {
+	margin-top: 85px;
+	
+	float: left;
+}
+
+.f2x-account-menu .f2x-account-menu-list {
+	list-style: none;
+	
+	padding: 0;
+	margin: 0;
+}
+.f2x-account-menu .f2x-account-menu-list li {
+	text-align: right;
+	
+	padding: 8px 0;
+	
+	letter-spacing: 0.67px;
+}

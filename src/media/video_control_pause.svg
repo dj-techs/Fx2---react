@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>video_control_pause</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Video-Player-+-Info-+-Timeline" transform="translate(-28.000000, -481.000000)" fill="#FFFFFF">
+            <g id="Video-Player">
+                <path d="M28,481.991803 C28,481.444045 28.446325,481 29.0003797,481 L33.4931268,481 C34.0456213,481 34.4935065,481.455306 34.4935065,481.991803 L34.4935065,500.008197 C34.4935065,500.555955 34.0471815,501 33.4931268,501 L29.0003797,501 C28.4478852,501 28,500.544694 28,500.008197 L28,481.991803 Z M39.6883117,481.991803 C39.6883117,481.444045 40.1346367,481 40.6886914,481 L45.1814385,481 C45.7339329,481 46.1818182,481.455306 46.1818182,481.991803 L46.1818182,500.008197 C46.1818182,500.555955 45.7354932,501 45.1814385,501 L40.6886914,501 C40.1361969,501 39.6883117,500.544694 39.6883117,500.008197 L39.6883117,481.991803 Z" id="video_control_pause"></path>
+            </g>
+        </g>
+    </g>
+</svg>

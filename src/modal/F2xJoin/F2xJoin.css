@@ -1,0 +1,38 @@
+.f2x-login-buttons {
+	width: auto;
+	
+	display: inline-block;
+	white-space: nowrap;
+	
+	font-size: 14px;
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 20px;
+}
+
+
+.f2x-login-buttons button {
+	background: transparent !important;
+	
+	border-width: 0 !important;
+	
+	padding: 0 !important;
+	margin: 0 !important;
+	
+	color: #222 !important;
+	
+	font-family: 'Montserrat', sans-serif !important;
+    font-size: 1em !important;
+    
+    width: auto !important;
+    
+    font-weight: normal !important;
+    
+    letter-spacing: 0.2px !important;
+    
+    cursor: pointer;
+}
+
+.f2x-login-buttons div div, .f2x-login-buttons img {
+    display: inline-block
+}
