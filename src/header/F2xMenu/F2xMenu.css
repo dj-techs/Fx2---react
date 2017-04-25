@@ -136,7 +136,7 @@
 
 /* Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 1060px) and (max-width: 1380px) {
 	.f2x-header-menu {
 		margin-left: 20px;
 	}
@@ -164,7 +164,7 @@
  
 /* Móvil [horizontal] | tablets: [vertical]
    ------------------------------------------------------------------------- */
-@media (max-width: 767px) {
+@media (max-width: 1059px) {
 	.f2x-header-nav {
 		display: none;
 	}
