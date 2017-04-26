@@ -3,7 +3,7 @@
 }
 
 .bg-back-video {
-	height: 1160px;
+	height: calc(100vh + 259px);
 	position: absolute;
 	left: calc( 50vw - 960px);
 	z-index: -100;
@@ -24,7 +24,7 @@
 }
 
 .blurMask {
-	height: calc(1160px - 100%);
+	height: 334px;
 	position: relative;
 	overflow: hidden;
 }
@@ -39,7 +39,27 @@
 	bottom: 0;
 }
 
-.f2x-videocontrols {
+.f2x-pagenation {
+	  position: absolute;
+    left: 120px;
+    bottom: 80px;
+}
+
+.btn-page {
+	display: inline-block;
+	margin: 5px;
+	width: 15px;
+	height: 15px;
+	border-radius: 8px;
+	border: 1px solid white;
+}
+
+.btn-page:hover {
+	transition: 0.2s;
+	background-color: white;
+}
+
+.f2x-video-controls {
 		position: absolute;
 		left: calc(50vw - 533px);
 		bottom: calc(50vh - 300px);
@@ -64,10 +84,46 @@
 	z-index: 101;
 }
 
-.f2x-video-compo-close {
+.f2x-video-player-close {
 	position: absolute;
 	right: calc(50vw - 520px);
 	top: calc(50vh - 290px);
+}
+
+.f2x-btn-get-started {
+	position: absolute;
+	right: calc(50vw - 520px);
+	top: 50%;
+	
+	width: 150px;
+	height: 150px;
+
+	margin: -75px 0 0 -75px;
+	z-index: 200;
+}
+
+.f2x-comment {
+	position: absolute;
+	right: 50%;
+	top: 50%;
+	
+	width: 375px;
+	height: 50px;
+
+	margin: 150px -188px 0 0;
+	z-index: 1;
+}
+
+.f2x-arrow-down {
+	position: absolute;
+	right: 50%;
+	top: 50%;
+	
+	width: 45px;
+	height: 13px;
+
+	margin: 220px -22px 0 0;
+	z-index: 1;
 }
 
 .f2x-video-prev-video {

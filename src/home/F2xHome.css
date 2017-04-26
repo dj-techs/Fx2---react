@@ -1,0 +1,108 @@
+.f2x-image-title {
+    position: relative;
+    height: calc(1141px - 100vh);
+    width: 100%;
+    background: url("../media/f2x-title.png") no-repeat top right;
+}
+
+.f2x-tutorial-container {
+    position: relative;
+    width: 926px;
+    height: 260px;
+    margin: 0 auto;
+}
+
+.f2x-tutorial-thumb-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 462px;
+    height: 112px;
+    background: url("../media/left.png");
+}
+
+.f2x-tutorial-thumb-right{
+    position: absolute;
+    top: 0;
+    /*right: 154px;*/
+    right: 0px;
+    width: 308px;
+    height: 112px;
+    background: url("../media/right.png");
+}
+
+.f2x-tutorial-thumb-move{
+    position: absolute;
+    /*left: 203px;
+    top: 127px;*/
+    left: 462px;
+    top: 0px;
+    width: 154px;
+    height: 112px;
+    background: url("../media/thumb-move.png");
+}
+
+.f2x-tutorial-cursor{
+    position: absolute;
+    /*left: 170px;
+    top: 211px;*/
+    left: 430px;
+    top: 80px;
+    width: 63px;
+    height: 63px;
+    background: url("../media/cursor.png");
+}
+
+.f2x-tutorial-text{
+    position: absolute;
+    left: 1px;
+    top: 121px;
+    width: 177px;
+    height: 32px;
+    background: url("../media/tutorial-text.png");
+}
+
+.f2x-tutorial-title{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: url("../media/tutorial-title.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.f2x-tutorial-button{
+    position: absolute;
+    top: 121px;
+    right: 0;
+    width: 206px;
+    height: 28px;
+    background: url("../media/tutorial-buttons.png");
+}
+
+.f2x-title {
+    margin-top: 13px;
+    margin-bottom: 0px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.f2x-content-1 {
+    max-width: 980px;
+    min-height: 410px;
+    margin: 10px auto;
+    background: url("../media/desktop-mobile.png") no-repeat right center;
+}
+
+.f2x-linear-1 {
+    width: 647px;
+    height: 39px;
+    background: url("../media/leader-line-1.png") no-repeat bottom left;
+}
+
+.f2x-linear-2 {
+    width: 495px;
+    height: 39px;
+    margin-top: 50px;
+    background: url("../media/leader-line-2.png") no-repeat bottom left;
+}

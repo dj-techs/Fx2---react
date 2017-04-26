@@ -34,7 +34,6 @@ import ICON_ARROW from '../media/big_arrow.svg';
 		
 	
 		render(){
-			console.log(this.props.wo);
 			return (
 				<div className="f2x-item-list">
 					<div className="f2x-item-list-slider" ref="slider" >

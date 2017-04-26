@@ -39,6 +39,9 @@ import vcSoundOff from '../../media/video_control_sound_off.svg';
 import vcSoundOn from '../../media/video_control_sound_on.svg';
 import prevVideo from '../../media/carousel-left.svg';
 import nextVideo from '../../media/carousel-right.svg';
+import getStarted from '../../media/button-get-started.svg';
+import comment from '../../media/home-comment.svg';
+import arrowDown from '../../media/home-arrow-down.svg';
 
 
 
@@ -125,7 +128,7 @@ class F2xVideoControls extends Component {
 		const {props} = this;
 		
 		return (
-			<div className="f2x-videocontrols" style={{display: isIOS() ? 'none' : 'block'}}>
+			<div className="f2x-video-controls" style={{display: isIOS() ? 'none' : 'block'}}>
 				<F2xVideoProgress hidden={props.hidden} ref="progress" hold={props.hold} percent={props.cT*100} onClick={ (n,v,m) => props.onClick(n,v,m)  }  />
 			
 				<F2xVideoPause onClick={ (n) => props.onClick(n)  } icon={ props.mode ? vcPlay : vcPause}/>
@@ -154,8 +157,11 @@ class f2xVideoCarousel extends Component{
 			muted: false,
 			loop: true,
 			audioSlider: false,
-			autoPlay: false
+			autoPlay: false,
+			arrow_position: 0,
+			arrow_move_up: true
 	    };
+
 	}
 
 	formatTime(seconds) {
@@ -252,6 +258,38 @@ class f2xVideoCarousel extends Component{
 		
 	}
 
+	animateArrow() {
+		if (!this.flag){ 
+			this.flag = true;
+			return
+		} else {
+			clearInterval(this.arrowTime)
+			if (this.state.arrow_move_up) {
+				if(this.state.arrow_position >20) {
+					this.setState({
+						arrow_move_up: false,
+						arrow_position: 20
+					})
+				} else {
+					this.setState({
+						arrow_position: this.state.arrow_position +1
+					})
+				}
+			} else {
+				if(this.state.arrow_position <1) {
+					this.setState({
+						arrow_move_up: true,
+						arrow_position: 0
+					})
+				} else {
+					this.setState({
+						arrow_position: this.state.arrow_position-1
+					})
+				}
+			}
+		}		
+	}
+
 	toggleMute() {
         if (this.state.muted) {
             this.unmute();
@@ -337,6 +375,12 @@ class f2xVideoCarousel extends Component{
 		}
 	}
 
+	toSlide (e) {
+		this.setState({
+			id: e
+		})
+	}
+
 	render() {
 		const video = [
 			"../../media/video/1.mp4",
@@ -346,6 +390,17 @@ class f2xVideoCarousel extends Component{
 			"../../media/video/5.mp4",
 			"../../media/video/6.mp4"
 		];
+
+		const numbers = [0, 1, 2, 3, 4, 5];
+		const pagination = numbers.map((number) =>
+			<div className="btn-page" key={number.toString()} value={number} onClick={() => this.toSlide(number)} />
+		);
+
+		this.flag = false;
+		this.arrowTime = setInterval(
+	    	() => this.animateArrow(),
+			10
+	    );
 
 		const alphaMask = {
 			opacity: this.state.invoke? 0.3 : 0
@@ -357,7 +412,7 @@ class f2xVideoCarousel extends Component{
 				<div className="fullscreen-bg">
 					<video
 						muted
-						ref="backVideo"
+						ref="backVideo"	
 						loop={this.state.loop}
 						autoPlay={this.state.autoPlay}
 						className="bg-back-video"
@@ -389,20 +444,29 @@ class f2xVideoCarousel extends Component{
 							hidden={this.state.paused && this.state.currentTime === 0}
 						/>
 						<div 
-							className="f2x-video-compo-close cursor" onClick={() => this.closeInvoke()} >CLOSE</div>
+							className="f2x-video-player-close cursor" onClick={() => this.closeInvoke()} >CLOSE</div>
 						<F2xIcon 	
 							className="f2x-video-prev-video cursor" 
 							icon={ prevVideo }
-							style={{marginTop: isIOS() ? -20 : -45}} 
 							onClick={() => this.prevVideo()} 
 							/>
 						<F2xIcon 	
 							className="f2x-video-next-video cursor" 
-							icon={ nextVideo }
-							style={{marginTop: isIOS() ? -20 : -45}} 
+							icon={ nextVideo }							
 							onClick={() => this.nextVideo()} 
 							/>
 					</div>
+					<F2xIcon
+						className="f2x-comment cursor"
+						icon={ comment } />
+					<F2xIcon
+						className="f2x-arrow-down cursor" 
+						style={{marginTop: this.state.arrow_position+220}} 
+						icon={ arrowDown } />
+					<F2xIcon
+						className="f2x-btn-get-started cursor" 
+						icon={ getStarted }
+						onClick={() => this.getStarted()} />
 					<F2xIcon 	
 						className="f2x-video-big-play cursor" 
 						icon={ playerIcon }
@@ -421,6 +485,10 @@ class f2xVideoCarousel extends Component{
 						/>
 					</div>
 				</div>
+				<div className="f2x-pagenation" hidden={this.state.invoke}>
+					{pagination}
+				</div>
+
 			</div>
 		)
 	}
