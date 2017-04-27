@@ -174,9 +174,10 @@ class f2xVideoCarousel extends Component{
 	nextVideo(){
 		const { id } = this.state;		
 		const nextId = (id+1 < 6 ? id+1 : 0);	
-		
+		clearInterval(this.arrowTime)
 		this.setState({
 			id: nextId,
+			paused: false,
 			autoPlay: true
 		})
 	}
@@ -184,14 +185,16 @@ class f2xVideoCarousel extends Component{
 	prevVideo(){
 		const { id } = this.state;		
 		const nextId = (id-1 >= 0 ? id-1 : 5);
-				
+		clearInterval(this.arrowTime)		
 		this.setState({
 			id: nextId,
+			paused: false,
 			autoPlay: true
 		})
 	}
 
 	Invoke() {
+		clearInterval(this.arrowTime)
         this.setState({
 			paused: !this.state.paused,
 			invoke: !this.state.invoke,
@@ -216,7 +219,7 @@ class f2xVideoCarousel extends Component{
         } else {
             this.pause();
         }
-
+		clearInterval(this.arrowTime)
 		if (!this.state.invoke){
 			this.setState({
 				paused: !this.state.paused,
@@ -232,8 +235,8 @@ class f2xVideoCarousel extends Component{
 
 	play() {
         this.refs.foreVideo.play();
-		this.refs.backVideo.play();
-		this.refs.blurVideo.play();
+		this.refs.backVideo.pause();
+		this.refs.blurVideo.pause();
 		this.evalTime = setInterval(
 	    	() => this.update(),
 			50
@@ -242,8 +245,8 @@ class f2xVideoCarousel extends Component{
 
     pause() {
         this.refs.foreVideo.pause();
-		this.refs.backVideo.pause();
-		this.refs.blurVideo.pause();
+		this.refs.backVideo.play();
+		this.refs.blurVideo.play();
 		clearInterval(this.evalTime);
     }
 
@@ -296,6 +299,7 @@ class f2xVideoCarousel extends Component{
         } else {
             this.mute();
         }
+		clearInterval(this.arrowTime)
         this.setState({
 			muted: !this.state.muted
 		})
@@ -318,7 +322,7 @@ class f2xVideoCarousel extends Component{
 	    
 	    this.refs.foreVideo.volume = newValue;
 	    this.refs.foreVideo.muted = muted;
-	    
+	    clearInterval(this.arrowTime)
 	    this.setState({
 		    volume: newValue,
 		    muted: muted
@@ -339,6 +343,7 @@ class f2xVideoCarousel extends Component{
     }
 
 	playerAction(val,v, m){
+		clearInterval(this.arrowTime)
 		switch(val){
 			case "pause":
 				this.togglePlay();
@@ -376,6 +381,7 @@ class f2xVideoCarousel extends Component{
 	}
 
 	toSlide (e) {
+		clearInterval(this.arrowTime)
 		this.setState({
 			id: e
 		})

@@ -10,6 +10,7 @@
     "concurrently": "^3.1.0",
     "connect": "2.3.x",
     "http-proxy": "0.8.x",
+    "jquery": "^3.2.1",
     "react": "^15.4.1",
     "react-custom-scrollbars": "^4.0.1",
     "react-dnd": "^2.1.4",

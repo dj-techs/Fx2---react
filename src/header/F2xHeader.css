@@ -1,4 +1,8 @@
 .f2x-header {
+	position: fixed;
+
+	width: 100%;
+
 	background-color: #FFF;
 	
 	height: 71px;
@@ -10,6 +14,8 @@
 	color: #414141;
   
 	transition: all .3s ease-in-out;
+
+	z-index: 200;
 }
 
 
