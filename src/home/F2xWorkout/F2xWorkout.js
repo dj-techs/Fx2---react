@@ -30,11 +30,8 @@ import './F2xWorkout.css';
 const f2xWorkout = ({list}) => (
 	<div className="f2x-home-workout-list">
 		<div className="f2x-home-workout-title">
-			<div className="f2x-workouts-line separated">...or select a preconfigured workout below:</div>
-			
-			<div style={{float: 'right'}}>
-				<F2xButton name="See All"  className="f2x-new-button-transparent separated upper" onClick={ () => browserHistory.push('/workout') } />
-			</div>
+			<h2 className="f2x-title show" style={{color:"#1d1d1d", textAlign: 'center'}}>CHECK OUT OUR PRECONFIGURED WORKOUTS</h2>
+			<h2 className="f2x-title show" style={{color:"#9b9b9b", textAlign: 'center'}}>CURTED BY TOP MODELS</h2>
 			
 			<div className="clear" />
 		</div>

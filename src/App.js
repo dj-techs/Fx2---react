@@ -18,6 +18,8 @@ import F2xHeader from './header/F2xHeader';
 
 
 import F2xHome from './home/F2xHome';
+import F2xJoin from './join/F2xJoin';
+import F2xSignIn from './signin/F2xSignIn';
 
 import F2xExercise from './exercise/F2xExercise';
 import F2xWorkout from './workout/F2xWorkout';
@@ -121,7 +123,8 @@ const App = () => (
 				<Route path="social/instagram/complete/signup(/:pathParam)" component={F2xHome} />
 			</Route> 
 		</Route>
-		
+		<Route path="/join-platinum" component={F2xJoin} />
+		<Route path="/signin" component={F2xSignIn} />
 		
 		<Route path="/mail(/:pathParam)" component={F2xMail} />
 	</Router>      

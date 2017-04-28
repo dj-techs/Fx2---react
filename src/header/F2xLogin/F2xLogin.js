@@ -367,8 +367,7 @@ const headerNotLogged = ({ dispatch, filter }) => (
 				className="f2x-new-button-transparent separated" 
 				style={{height: '46px', width: 'auto', padding: '0 15px', fontSize: '12px'}} 
 				onClick={ 
-					() => 
-						dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN)) 
+					() => dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN)) 
 				} 
 			/>
 			
@@ -376,8 +375,7 @@ const headerNotLogged = ({ dispatch, filter }) => (
 				className="f2x-new-button-black-invert separated" 
 				style={{height: '71px', width: '134px', fontSize: '12px'}} 
 				onClick={ 
-					() => 
-						dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.JOIN)) 
+					() => dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.JOIN))
 				} 
 			/>
 		</div>

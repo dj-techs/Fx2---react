@@ -1,0 +1,37 @@
+.f2x-login-buttons button {
+	background: transparent !important;
+	
+	border-width: 0 !important;
+	
+	padding: 0 !important;
+	margin: 0 !important;
+	
+	color: #222 !important;
+	
+	font-family: 'Montserrat', sans-serif !important;
+    font-size: 1em !important;
+    
+    width: auto !important;
+    
+    font-weight: normal !important;
+    
+    letter-spacing: 0.2px !important;
+    
+    
+    cursor: pointer;
+}
+
+.f2x-signin-btn {
+	margin-top: 95px;
+}
+
+
+
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	.f2x-signin-btn {
+		margin-top: 35px;
+	}
+	
+}

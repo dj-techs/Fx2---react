@@ -4,6 +4,7 @@ import { browserHistory } from 'react-router';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { findDOMNode } from 'react-dom';
+import { Grid, col, Row } from 'react-bootstrap';
 import $ from 'jquery';
 
 
@@ -48,7 +49,10 @@ class F2xScrollAnimation extends Component {
 			reachSiteClass: 'f2x-title',
 			reachLine2Class: 'f2x-linear',
 			reachPhoneClass: 'f2x-phone-img',
-			reachAppClass: 'f2x-title'
+			reachAppClass: 'f2x-title',
+			trackTitleClass: 'f2x-title',
+			trackBodyClass: 'f2x-title',
+			trackKarlieClass: 'f2x-karlie',
 		}
 
 		this.handleScroll = this.handleScroll.bind(this);
@@ -90,41 +94,29 @@ class F2xScrollAnimation extends Component {
 			topacity = 1;
 		}
 
-		if(this.currentposition > 925 ){
-			this.setState({
-				reachTitleClass: 'f2x-title show'
-			})
+		if(this.currentposition > 1000 ) {
+			setTimeout(() => {this.setState({reachTitleClass: 'f2x-title show'})}, 0)
+			setTimeout(() => {this.setState({reachLine1Class: 'f2x-linear linear-1'})}, 500)
+			setTimeout(() => {this.setState({reachSiteClass: 'f2x-title show'})}, 1000)
 		}
 
-		if(this.currentposition > 1000 ){
-			this.setState({
-				reachLine1Class: 'f2x-linear linear-1'
-			})
+		if(this.currentposition > 1100) {
+			setTimeout(() => {this.setState({reachLine2Class: 'f2x-linear linear-2'})}, 0)
+			setTimeout(() => {this.setState({reachPhoneClass: 'f2x-phone-img show'})}, 500)
+			setTimeout(() => {this.setState({reachAppClass: 'f2x-title show'})}, 1000)
 		}
 
-		if(this.currentposition > 1050 ){
-			this.setState({
-				reachSiteClass: 'f2x-title show'
-			})
+		if(this.currentposition > 1330) {
+			setTimeout(() => {this.setState({trackTitleClass: 'f2x-title show'})}, 0)
 		}
 
-		if(this.currentposition > 1050 ){
-			this.setState({
-				reachSiteClass: 'f2x-title show'
-			})
+		if(this.currentposition > 1550 ){
+			setTimeout(() => {this.setState({trackBodyClass: 'f2x-title show'})}, 0)
+
 		}
 
-		if(this.currentposition > 1100 ){
-			this.setState({
-				reachLine2Class: 'f2x-linear linear-2',
-				reachPhoneClass: 'f2x-phone-img show'
-			})
-		}
-
-		if(this.currentposition > 1200 ){
-			this.setState({
-				reachAppClass: 'f2x-title show'
-			})
+		if(this.currentposition > 1700 ){
+			setTimeout(() => {this.setState({trackKarlieClass: 'f2x-karlie show'})}, 0)
 		}
 
 		this.setState({
@@ -149,7 +141,7 @@ class F2xScrollAnimation extends Component {
 					<div className="f2x-tutorial-cursor" style={{ left: this.state.cursorPos.left, top: this.state.cursorPos.top, opacity: this.state.curOpacity }}/>
 					<div className="f2x-tutorial-button" />
 				</div>
-				<div className="f2x-content-1">
+				<div className="f2x-home-content-1">
 					<h2 className={ this.state.reachTitleClass } style={{color:"#9B9B9B"}}>BROWSE</h2>
 					<h2 className={ this.state.reachTitleClass } style={{color:"#1d1d1d"}}>HOT EXPERCISE VIDEOS</h2>
 					<h2 className={ this.state.reachTitleClass } style={{color:"#9B9B9B"}}>THAT WILL MAKE YOU SWEAT</h2>
@@ -160,11 +152,62 @@ class F2xScrollAnimation extends Component {
 					<h2 className={ this.state.reachAppClass } style={{color:"#9B9B9B"}}>and within the</h2>
 					<h2 className={ this.state.reachAppClass } style={{color:"#9B9B9B"}}>Ford industry iOS app</h2>
 				</div>
-
+				<div className="f2x-home-bar"/>
+				<div className="f2x-home-content-2">
+					<div style={{ maxWidth: '980px', padding: '20px 0 15px 0', margin: '0 auto', height: '273px' }}>
+						<div style={{float: 'left'}}>
+						<h2 className={ this.state.trackTitleClass } style={{color:"#1d1d1d"}}>TRACK YOUR PROGRESS</h2>
+						<h2 className={ this.state.trackTitleClass } style={{color:"#9B9B9B"}}>GET FIT LIKE A MODEL</h2>
+						<h4 className={ this.state.trackBodyClass } style={{color:"#2b2b2b", marginTop: '30px'}}>Archive your fitnes goals: runway ready.</h4>
+						<h4 className={ this.state.trackBodyClass } style={{color:"#2b2b2b"}}>summertime sexy, or just getting back in shape.</h4>
+						<h4 className={ this.state.trackBodyClass } style={{color:"#2b2b2b", marginTop: '20px'}}>3500 calories = 1 pound of fat</h4>
+						<h4 className={ this.state.trackBodyClass } style={{color:"#2b2b2b"}}>watch the calories burn!</h4>
+						<div className={ this.state.trackLineClass }/>
+						</div>
+						<video
+							muted
+							ref="subVideo"
+							style= {{float:'right'}}
+							loop={true}
+							autoPlay={false}
+							className="f2x-home-content2-video"
+							preload="auto"
+							src={"../media/video/6.mp4"}
+						/>
+					</div>
+					<div className={ this.state.trackKarlieClass } />					
+				</div>
+				<div className="f2x-home-bar"/>
 			</div>
 		)
 	}
 
+}
+
+class F2xHomeFooter extends Component {
+	render(){
+		return (
+			<div className='f2x-home-footer'>
+				<div className='f2x-footer-back-img' >
+					<button className='f2x-home-btn-select' onClick={ () => {browserHistory.push('/exercise')} }>SELECT</button>
+					<button className='f2x-home-btn-select' onClick={ () => {browserHistory.push('/join-platinum')} }>SELECT</button>
+				</div>
+				{/*<div className="col-xs-6">ss
+					<h2>BUY</h2>
+					<h2>SINGLE</h2>
+					<h2>WORKOUT</h2>
+					<h1><h2>$</h2>2.99<h2>/ea</h2></h1>
+					<h2>Configure your workout and have <strong>unlimited</strong> access to it.</h2>
+				</div>
+				<div className="col-xs-6">
+					<h2>BECOME</h2>
+					<h2>PLATINUM</h2>
+					<h2>MEMBER</h2>
+				</div>*/}
+				
+			</div>
+		)
+	}
 }
 
 class F2xHome extends Component {
@@ -189,7 +232,9 @@ class F2xHome extends Component {
 					</div>
 				</div>
 				<F2xScrollAnimation />
-				<F2xWorkout />				
+				<F2xWorkout />	
+				<div className="f2x-home-bar-top"/>
+				<F2xHomeFooter />
 			</div>
 		)
 	}
