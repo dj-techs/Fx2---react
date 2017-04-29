@@ -367,7 +367,7 @@ const headerNotLogged = ({ dispatch, filter }) => (
 				className="f2x-new-button-transparent separated" 
 				style={{height: '46px', width: 'auto', padding: '0 15px', fontSize: '12px'}} 
 				onClick={ 
-					() => dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN)) 
+					browserHistory.push('/singin')
 				} 
 			/>
 			

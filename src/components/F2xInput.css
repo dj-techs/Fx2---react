@@ -76,12 +76,11 @@
 .f2x-input-box .info-msg {
 	position: absolute;
 	top:38px;
-	left:-20px;
+	left:-30px;
 	
 	width:340px;
 	height:18px;
-	
-	text-transform: uppercase;
+
 	text-align: center;
 	font-size: 10px;
 }

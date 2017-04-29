@@ -794,6 +794,8 @@ export const updateAvatarRequest = function(file){
 
 
 export const joinRequest = function(ldata){
+	store.dispatch( setEvalJoin({signable: true}) )
+	return;
 	var xhr = new XMLHttpRequest();
 	
 	xhr.open('POST', '/api/v0/auth/signup/?format=json', true);
@@ -808,16 +810,16 @@ export const joinRequest = function(ldata){
 			//userInfo = JSON.parse(xhr.responseText);
 		    //setUpAuthStorage();
 		    
-		    store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.GENERIC, {
-			    title: 'WE´VE SEND YOU A CONFIRMATION EMAIL',
-			    content: 'follow the instructions and them click on login ',
-			    btn: () => {
-				    store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN))
-			    },
-			    btnText: 'SIGN IN'
-		    }) );
+		    // store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.GENERIC, {
+			//     title: 'WE´VE SEND YOU A CONFIRMATION EMAIL',
+			//     content: 'follow the instructions and them click on login ',
+			//     btn: () => {
+			// 	    store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN))
+			//     },
+			//     btnText: 'SIGN IN'
+		    // }) );
 		    
-		    browserHistory.push('/');
+		    // browserHistory.push('/');
 		} else {
 			const merr = JSON.parse(decodeURIComponent(xhr.responseText));
 
@@ -827,6 +829,22 @@ export const joinRequest = function(ldata){
 			
 			if (merr.email !== undefined){
 				store.dispatch( setEvalJoin({errorMail: merr.email}) )
+			}
+
+			if (merr.cardnumber !== undefined){
+				store.dispatch( setEvalJoin({errorMail: merr.cardnumber}) )
+			}
+
+			if (merr.cardname !== undefined){
+				store.dispatch( setEvalJoin({errorMail: merr.cardname}) )
+			}
+
+			if (merr.expdate !== undefined){
+				store.dispatch( setEvalJoin({errorMail: merr.expdate}) )
+			}	
+
+			if (merr.cvv !== undefined){
+				store.dispatch( setEvalJoin({errorMail: merr.cvv}) )
 			}	
 		  
 			store.dispatch( setUserState(false) );		  

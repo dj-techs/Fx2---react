@@ -212,9 +212,9 @@
 .f2x-footer-back-img {
     position: absolute;
     top: 0;
-    width: 1280px;
+    width: 1600px;
     height: 600px;
-    left: calc(50% - 490px);
+    left: calc(50% - 600px);
     background: url("../media/footer-back1.png");
 }
 
@@ -234,9 +234,9 @@
 }
 
 .f2x-home-btn-select:first-child {    
-    left: 678px;
+    left: 738px;
 }
 
 .f2x-home-btn-select:last-child {    
-    left: 957px;
+    left: 1017px;
 }

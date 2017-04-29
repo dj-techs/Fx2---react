@@ -50,3 +50,49 @@
 	display: inline-block;
 	background: url("../media/icon_paypal_disabled.svg");
 }
+
+.f2x-welcome {
+	width: 148px;
+	height: 242px;
+	margin: 55px auto;
+	background: url("../media/welcome.png");
+}
+
+.f2x-input-comment {
+	background: url('../media/needhelp.png');
+	width: 21px;
+	height: 22px;
+	right: 0;
+	bottom: 7px;
+	position: absolute;
+}
+
+.f2x-cvv-comment {
+	position: absolute;
+    bottom: 25px;
+    right: -86px;
+    width: 305px;
+	height: 155px;
+	background: url('../media/cvv-comment.png'); 
+}
+
+.f2x-payment-comment {
+	position: absolute;
+	bottom: 70px;
+    right: calc(50% - 170px);
+	color: #1d1d1d;
+	font-size: 11px;
+    width: 305px;
+	height: 155px;
+	padding: 20px;
+	background: url('../media/pay-comment.png') no-repeat;
+	background-size: 100% 100%; 
+}
+
+.f2x-cvv-comment::after {
+	content: ''
+}
+
+* {
+	transition: all 0.2s;
+}
