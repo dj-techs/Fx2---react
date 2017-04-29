@@ -18,6 +18,7 @@ export const SET_EVAL_LOGIN = 'SET_EVAL_LOGIN';
 export const UPDATE_WORKOUT = 'UPDATE_WORKOUT';
 export const UPDATE_WORKOUT_TRAY = 'UPDATE_WORKOUT_TRAY';
 export const SET_EVAL_CHANGE_PASSWORD = 'SET_EVAL_CHANGE_PASSWORD';
+export const SET_EVAL_FORGOT_PASSWORD = 'SET_EVAL_FORGOT_PASSWORD';
 export const SET_HOME_IMAGE = 'SET_HOME_IMAGE';
 export const SET_EMAIL = 'SET_EMAIL';
 export const SET_CARD = 'SET_CARD';
@@ -208,6 +209,14 @@ export const setEvalLogin = (flags) => {
 export const setEvalChangePassword = (flags) => {
   return {
     type: SET_EVAL_CHANGE_PASSWORD,
+    flags
+  }
+}
+
+
+export const setEvalForgotPassword = (flags) => {
+  return {
+    type: SET_EVAL_FORGOT_PASSWORD,
     flags
   }
 }

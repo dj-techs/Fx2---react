@@ -366,16 +366,18 @@ const headerNotLogged = ({ dispatch, filter }) => (
 			<F2xButton name="SIGN IN" 
 				className="f2x-new-button-transparent separated" 
 				style={{height: '46px', width: 'auto', padding: '0 15px', fontSize: '12px'}} 
-				onClick={ 
-					browserHistory.push('/singin')
-				} 
+				onClick= { ()=> { 
+						browserHistory.push('/signin')
+					} 
+				}
 			/>
 			
 			<F2xButton name="JOIN" 
 				className="f2x-new-button-black-invert separated" 
 				style={{height: '71px', width: '134px', fontSize: '12px'}} 
 				onClick={ 
-					() => dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.JOIN))
+					browserHistory.push('/join-platinum')
+					/*() => dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.JOIN))*/
 				} 
 			/>
 		</div>

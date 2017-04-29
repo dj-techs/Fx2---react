@@ -164,6 +164,13 @@ class f2xVideoCarousel extends Component{
 
 	}
 
+	componentDidMount() {
+		this.arrowTime = setInterval(
+					() => this.animateArrow(),
+					10
+				);
+	}
+
 	formatTime(seconds) {
         var date = new Date(Date.UTC(1970,1,1,0,0,0,0));
         seconds = isNaN(seconds) ? 0 : Math.floor(seconds);
@@ -403,10 +410,6 @@ class f2xVideoCarousel extends Component{
 		);
 
 		this.flag = false;
-		this.arrowTime = setInterval(
-	    	() => this.animateArrow(),
-			10
-	    );
 
 		const alphaMask = {
 			opacity: this.state.invoke? 0.3 : 0
@@ -450,16 +453,16 @@ class f2xVideoCarousel extends Component{
 							hidden={this.state.paused && this.state.currentTime === 0}
 						/>
 						<div 
-							className="f2x-video-player-close cursor" onClick={() => this.closeInvoke()} >CLOSE</div>
+							className="f2x-video-player-close cursor" onClick={()=>{this.closeInvoke}} >CLOSE</div>
 						<F2xIcon 	
 							className="f2x-video-prev-video cursor" 
 							icon={ prevVideo }
-							onClick={() => this.prevVideo()} 
+							onClick={()=>{this.prevVideo}} 
 							/>
 						<F2xIcon 	
 							className="f2x-video-next-video cursor" 
 							icon={ nextVideo }							
-							onClick={() => this.nextVideo()} 
+							onClick={()=>{this.nextVideo}}
 							/>
 					</div>
 					<F2xIcon
@@ -472,12 +475,12 @@ class f2xVideoCarousel extends Component{
 					<F2xIcon
 						className="f2x-btn-get-started cursor" 
 						icon={ getStarted }
-						onClick={() => this.getStarted()} />
+						onClick={()=>{this.getStarted}} />
 					<F2xIcon 	
 						className="f2x-video-big-play cursor" 
 						icon={ playerIcon }
 						style={{marginTop: isIOS() ? -20 : -45}} 
-						onClick={() => this.togglePlay()} 
+						onClick={()=>{this.togglePlay}} 
 						hidden={!this.state.paused || this.state.hold} />
 					<div className="blurMask">
 						<video

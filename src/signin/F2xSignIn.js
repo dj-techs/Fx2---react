@@ -1,5 +1,6 @@
 import React , { Component } from 'react';
 import { connect } from 'react-redux'
+import { browserHistory } from 'react-router';
 
 
 
@@ -112,7 +113,7 @@ class LoginINSTA extends Component{
 const actionButton = ({  onClick, enabled, spinner }) => (
 	<div className="f2x-signin-btn">
 		<F2xButton name="SIGN IN"
-			className={`f2x-new-button-black small-font separated f2x-login-sign-btn ${enabled ? '':' disabled'}`} 
+			className={"f2x-new-button-black small-font separated f2x-login-sign-btn " + enabled ? '': 'disabled'}
 			onClick={ () => onClick() }
 			spinner={spinner} />
 	</div>
@@ -221,10 +222,11 @@ class f2xSignIn  extends Component {
 		const saveDatas = savein ? savein : {};
 		
 		return(
-			<div className="cuerpo" style={{bottom: '0'}}>
-				<div className="f2x-modal-title pc">SIGN IN</div>
-				
-				<form onSubmit={(e) => e.preventDefault()}>
+			<div className="cuerpo" style={{bottom: '0', maxWidth: '560px', textAlign: 'center', margin: '0 auto', paddingTop: '75px', position: 'relative'}}>
+				<div className='f2x-btn-back' onClick={ browserHistory.goBack }/>
+				<div className="f2x-modal-title pc" style={{textAlign: 'center'}}>SIGN IN</div>
+				<div className='f2x-logo-sign' style={{ width: '100px', height: '82px', marginLeft: 'calc(50% - 50px)'}}/>
+				<form onSubmit={(e) => e.preventDefault()} style={{}}>
 					<div style={{marginTop: '60px'}}>
 						<div>
 							<F2xInput className="f2x-input-long-2" placeholder="Email or Username" icon={icon_user} styleBox={{marginBottom: 23, width: 'CALC(100% - 50px)', maxWidth: '300px'}} 
@@ -234,7 +236,7 @@ class f2xSignIn  extends Component {
 						<div style={{marginTop: '13px'}}>
 							<F2xInput className="f2x-input-long-2" placeholder="Password" icon={input_lock} textR="Forgot?" 
 									errorRes={this.state.errors.password} ref="lPass" refID="password" onChange={ (e) => { this.update(e) } }
-									textRClick={()=> dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD) ) } type="password" styleBox={{width: 'CALC(100% - 50px)', maxWidth: '300px'}} />
+									textRClick= { () => { browserHistory.push('/forgot') } } type="password" styleBox={{width: 'CALC(100% - 50px)', maxWidth: '300px'}} />
 						</div>
 					</div>
 					
@@ -261,7 +263,7 @@ class f2xSignIn  extends Component {
 				<div className="footer-link-join small-font">
 					Not yet a member?
 					<div>
-						<span onClick={() => dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.JOIN) ) } style={{textDecoration: 'underline', cursor: 'pointer'}}>
+						<span onClick={ () => { browserHistory.push('/join-platinum') } } style={{textDecoration: 'underline', cursor: 'pointer'}}>
 							join
 						</span>
 					</div>

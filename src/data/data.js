@@ -1,7 +1,7 @@
 import { browserHistory } from 'react-router';
 
 import { setWorkoutHome, setExercises, setFilters, setTrainers, setWorkouts , setMyWorkouts } from '../actions';
-import { setVisibilityModal, ModalVisibilityFilters, ModalTypes , setUserState, setEvalJoin , setEvalLogin, setEvalChangePassword, setHomeImage, setCard, setPlan } from '../actions'
+import { setVisibilityModal, ModalVisibilityFilters, ModalTypes , setUserState, setEvalJoin , setEvalLogin, setEvalChangePassword,  setEvalForgotPassword, setHomeImage, setCard, setPlan } from '../actions'
 
 
 
@@ -355,13 +355,15 @@ export const requestPasswordReset = function( user, call ){
 
 	xhr.onload = function() {
 		if (xhr.status === 200 || xhr.status === 201 ) {
-			const resp = JSON.parse(decodeURIComponent(xhr.responseText));
+			store.dispatch( setEvalForgotPassword({success: true}) )
+			// const resp = JSON.parse(decodeURIComponent(xhr.responseText));
 	        
-	        store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 1, user: user, data: resp.status}) );
+	        // store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 1, user: user, data: resp.status}) );
 		} else {
-			const merr = JSON.parse(decodeURIComponent(xhr.responseText));
+			store.dispatch( setEvalForgotPassword({success: false}) )
+			// const merr = JSON.parse(decodeURIComponent(xhr.responseText));
 			
-			store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 2, user: user, data: merr.error}) );
+			// store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 2, user: user, data: merr.error}) );
 		}
 		
 	    call && call(2);
@@ -372,7 +374,9 @@ export const requestPasswordReset = function( user, call ){
 		JSON.stringify({
 			username: user
 		})
-	);	
+	);
+
+
 }
 
 
@@ -794,8 +798,7 @@ export const updateAvatarRequest = function(file){
 
 
 export const joinRequest = function(ldata){
-	store.dispatch( setEvalJoin({signable: true}) )
-	return;
+	
 	var xhr = new XMLHttpRequest();
 	
 	xhr.open('POST', '/api/v0/auth/signup/?format=json', true);
@@ -818,7 +821,7 @@ export const joinRequest = function(ldata){
 			//     },
 			//     btnText: 'SIGN IN'
 		    // }) );
-		    
+		    store.dispatch( setEvalJoin({signable: true}) )
 		    // browserHistory.push('/');
 		} else {
 			const merr = JSON.parse(decodeURIComponent(xhr.responseText));

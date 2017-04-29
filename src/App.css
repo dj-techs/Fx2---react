@@ -207,7 +207,6 @@ a:visited {
 	clear: both;
 }
 
-
 .f2x-content {
 	margin-top: 0;
 	padding-top: 75px;
@@ -245,6 +244,14 @@ a:visited {
 	display: none;
 }
 
+.f2x-btn-back {
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	background: url('./media/btn-back.png');
+}
 
 /* Móvil [horizontal] | tablets: [vertical]
    ------------------------------------------------------------------------- */

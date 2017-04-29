@@ -20,6 +20,7 @@ import F2xHeader from './header/F2xHeader';
 import F2xHome from './home/F2xHome';
 import F2xJoin from './join/F2xJoin';
 import F2xSignIn from './signin/F2xSignIn';
+import F2xForgot from './forgot/F2xForgot';
 import F2xPaypalSign from './paypalsign/F2xPaypalSign';
 
 import F2xExercise from './exercise/F2xExercise';
@@ -125,9 +126,9 @@ const App = () => (
 			</Route> 
 		</Route>
 		<Route path="/join-platinum" component={F2xJoin} />
-		<Route path="/signin" component={F2xSignIn} />
-		<Route path="/paypalsingin" component={F2xPaypalSign} />
-		
+		<Route path="/forgot" component={F2xForgot} />
+		<Route path="/signin" component={F2xSignIn} />		
+		<Route path="/paypalsignin" component={F2xPaypalSign} />		
 		<Route path="/mail(/:pathParam)" component={F2xMail} />
 	</Router>      
 );

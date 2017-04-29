@@ -1,0 +1,16 @@
+.f2x-modal-reset-text {
+	width: 335px;
+	font-size: 14px;
+	margin: 50px auto 60px;
+	font-weight: 300;
+}
+
+ 
+/* Móvil: vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	.f2x-modal-reset-text {
+		width: 265px;
+		font-size: 10px;
+	}
+}

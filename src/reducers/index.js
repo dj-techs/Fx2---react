@@ -15,6 +15,7 @@ import { F2xEvalJoin } from './F2xEvalJoin'
 import { F2xEvalLogin } from './F2xEvalLogin'
 import { F2xMyWorkouts } from './F2xMyWorkouts'
 import { F2xEvalChangePassword } from './F2xEvalChangePassword'
+import { F2xEvalForgotPassword } from './F2xEvalForgotPassword'
 import { F2xHomeImage } from './F2xHomeImage'
 import { F2xCard } from './F2xCard'
 import { F2xPlan } from './F2xPlan'
@@ -41,6 +42,7 @@ const reducer = combineReducers({
 	evalJoin: F2xEvalJoin,
 	evalLogin: F2xEvalLogin,
 	evalChangePassword: F2xEvalChangePassword,
+	evalForgotPassword: F2xEvalForgotPassword,
 	homeImage: F2xHomeImage,
 	card: F2xCard,
 	plan: F2xPlan
