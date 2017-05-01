@@ -300,17 +300,17 @@ class f2xBecomePlatinumMember extends Component {
 								style={{margin: '0', width: 'CALC(100% - '+ this.state.left +'px)', paddingLeft: this.state.left +'px'}} 
 								styleBox={{width: '300px', marginTop: '23px'}} 
 								icon={this.state.card}
-								onChange={(e) => { this.update(e) }} />
+								onChange={(e) => { this.update(e) }} />				
 					
-					
-					<F2xInput 	placeholder='Exp. Date' 
+					<div style={{position: 'relative', height: '60px'}}>
+
+						<F2xInput 	placeholder='Exp. Date' 
 								ref="cardDate" refID="text" 
 								className="f2x-input-full" 
 								style={{width: '140px'}} 
 								styleBox={{float: 'left', width: '140px', marginTop: '23px'}}
 								onChange={(e) => { this.update(e) }} />
-					
-					<div style={{position: 'relative'}}>
+
 						<F2xInput 	placeholder='CVV' 
 									ref="cardCVV" refID="text"
 									className="f2x-input-full" 
