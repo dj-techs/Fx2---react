@@ -20,7 +20,7 @@ import F2xMyWorkoutView from './F2xMyWorkoutView/F2xMyWorkoutView';
  * Gloval Vars & Functions
  */
 import { store } from '../';
-import { setTitleMobile } from '../actions/';
+import { setTitleMobile, setAppStates } from '../actions/';
 
 
 
@@ -36,7 +36,13 @@ import './F2xMyWorkout.css';
 
 
 class f2xMyWorkout extends Component {
+
+	constructor(props) {
+		super(props)		
+	}
+
 	componentWillMount() {
+		store.dispatch ( setAppStates('myworkout'))
 		store.dispatch( setTitleMobile('MY WORKOUTS') );
 	}
 	

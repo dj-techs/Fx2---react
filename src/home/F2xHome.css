@@ -15,7 +15,7 @@
 
 .f2x-tutorial-container {
     position: relative;
-    width: 926px;
+    width: 926px;f
     height: 260px;
     margin: 0 auto;
 }
@@ -139,6 +139,7 @@
 }
 
 .f2x-linear::after {
+    
     content: '';
     width: 39px;
     height: 39px;
@@ -157,6 +158,12 @@
     width: 495px;
     transform: none;
     margin-top: 50px;
+}
+
+.linear-3 {
+    width: 760px;
+    transform: none;
+    margin-top: 20px;
 }
 
 .show {

@@ -249,7 +249,7 @@ class F2xForgot extends Component {
 		return (
             <div style={{ maxWidth: '560px', position: 'relative', margin: '0 auto' }}>
                 <div className='f2x-btn-back' onClick={ browserHistory.goBack }/>
-                
+                {renderR}
             </div>
         )
 	}

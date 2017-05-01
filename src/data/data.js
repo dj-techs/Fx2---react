@@ -1,7 +1,7 @@
 import { browserHistory } from 'react-router';
 
 import { setWorkoutHome, setExercises, setFilters, setTrainers, setWorkouts , setMyWorkouts } from '../actions';
-import { setVisibilityModal, ModalVisibilityFilters, ModalTypes , setUserState, setEvalJoin , setEvalLogin, setEvalChangePassword,  setEvalForgotPassword, setHomeImage, setCard, setPlan } from '../actions'
+import { setVisibilityModal, ModalVisibilityFilters, ModalTypes , setUserState, setEvalJoin , setEvalLogin, setEvalChangePassword, setHomeImage, setCard, setPlan, setAppStates } from '../actions'
 
 
 
@@ -355,15 +355,13 @@ export const requestPasswordReset = function( user, call ){
 
 	xhr.onload = function() {
 		if (xhr.status === 200 || xhr.status === 201 ) {
-			store.dispatch( setEvalForgotPassword({success: true}) )
-			// const resp = JSON.parse(decodeURIComponent(xhr.responseText));
+			const resp = JSON.parse(decodeURIComponent(xhr.responseText));
 	        
-	        // store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 1, user: user, data: resp.status}) );
+	        store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 1, user: user, data: resp.status}) );
 		} else {
-			store.dispatch( setEvalForgotPassword({success: false}) )
-			// const merr = JSON.parse(decodeURIComponent(xhr.responseText));
+			const merr = JSON.parse(decodeURIComponent(xhr.responseText));
 			
-			// store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 2, user: user, data: merr.error}) );
+			store.dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.RESET_PASSWORD, {status: 2, user: user, data: merr.error}) );
 		}
 		
 	    call && call(2);
@@ -374,9 +372,7 @@ export const requestPasswordReset = function( user, call ){
 		JSON.stringify({
 			username: user
 		})
-	);
-
-
+	);	
 }
 
 
@@ -798,7 +794,6 @@ export const updateAvatarRequest = function(file){
 
 
 export const joinRequest = function(ldata){
-	
 	var xhr = new XMLHttpRequest();
 	
 	xhr.open('POST', '/api/v0/auth/signup/?format=json', true);
@@ -813,16 +808,16 @@ export const joinRequest = function(ldata){
 			//userInfo = JSON.parse(xhr.responseText);
 		    //setUpAuthStorage();
 		    
-		    // store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.GENERIC, {
-			//     title: 'WE´VE SEND YOU A CONFIRMATION EMAIL',
-			//     content: 'follow the instructions and them click on login ',
-			//     btn: () => {
-			// 	    store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN))
-			//     },
-			//     btnText: 'SIGN IN'
-		    // }) );
-		    store.dispatch( setEvalJoin({signable: true}) )
-		    // browserHistory.push('/');
+		    store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.GENERIC, {
+			    title: 'WE´VE SEND YOU A CONFIRMATION EMAIL',
+			    content: 'follow the instructions and them click on login ',
+			    btn: () => {
+				    store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN))
+			    },
+			    btnText: 'SIGN IN'
+		    }) );
+		    
+		    browserHistory.push('/');
 		} else {
 			const merr = JSON.parse(decodeURIComponent(xhr.responseText));
 
@@ -832,22 +827,6 @@ export const joinRequest = function(ldata){
 			
 			if (merr.email !== undefined){
 				store.dispatch( setEvalJoin({errorMail: merr.email}) )
-			}
-
-			if (merr.cardnumber !== undefined){
-				store.dispatch( setEvalJoin({errorMail: merr.cardnumber}) )
-			}
-
-			if (merr.cardname !== undefined){
-				store.dispatch( setEvalJoin({errorMail: merr.cardname}) )
-			}
-
-			if (merr.expdate !== undefined){
-				store.dispatch( setEvalJoin({errorMail: merr.expdate}) )
-			}	
-
-			if (merr.cvv !== undefined){
-				store.dispatch( setEvalJoin({errorMail: merr.cvv}) )
 			}	
 		  
 			store.dispatch( setUserState(false) );		  
@@ -1172,8 +1151,8 @@ const addStripeCard = (token) => {
 	xhr.onload = function() {
 		if (xhr.status === 200 || xhr.status === 201 ) {
 		    const resp = JSON.parse(xhr.responseText);
-
 			store.dispatch( setCard(resp) );
+			store.dispatch( setAppStates('join-platinum', true))
 		} else {
 			const merr = JSON.parse(decodeURIComponent(xhr.responseText));
 			
@@ -1198,10 +1177,16 @@ const stripeTokenResponse = (status, response) => {
 }
 
 export const stripeToken = (card) => {
+	store.dispatch( setAppStates('join-platinum', true))
+	console.log('activated join')
+	return;
 	window['Stripe'].setPublishableKey('pk_test_A0KVgqpjGsuGpzyiH2f3Y2Yj');
 	console.log(card)
 	window['Stripe'].createToken(
 		{
+			username: card.username,
+			email: card.email,
+			password: card.password,
             name: card.name,
             number: card.number,
             exp_month: card.month,
@@ -1547,7 +1532,9 @@ export const cardType = (digit) => {
 }
 
 
-
+export const caloriePerWeek = (weight, week) => {
+	return weight * 5000 / week;
+}
 
 
 if (gtoken === null){

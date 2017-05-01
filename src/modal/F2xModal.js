@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 /*
  * Data & Functions
  */
-import { resetWorkout } from '../data/workout_tools';
+// import { resetWorkout } from '../data/workout_tools';
 import { isMobile } from '../data/data';
 import { setVisibilityModal, ModalVisibilityFilters, ModalTypes } from '../actions';
 
@@ -32,6 +32,7 @@ import F2xBecomePlatinumMember from './F2xBecomePlatinumMember/F2xBecomePlatinum
 import F2xInviteFriend from './F2xInviteFriend/F2xInviteFriend';
 import F2xEditEmail from './F2xEditEmail/F2xEditEmail';
 import F2xGeneric from './F2xGeneric/F2xGeneric';
+import F2xMyGoalsBecomePlatinumMember from './F2xMyGoalsBecomePlatinumMember/F2xMyGoalsBecomePlatinumMember'
 
 
 
@@ -162,6 +163,10 @@ class f2xModal extends Component {
 			case ModalTypes.GENERIC:
 				imageDisplay = 'none';
 				modalRender = (<F2xGeneric params={param} />);
+				break;
+
+			case ModalTypes.MYGOALS_BECOME_PLATINUM:
+				modalRender = (<F2xMyGoalsBecomePlatinumMember/>)
 				break;
 				
 			default:

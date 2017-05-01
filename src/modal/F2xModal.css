@@ -43,7 +43,7 @@
 	
 	background: #fff;
 	
-	width: 536px;
+	min-width: 536px;
 	height: auto;
 	
 	color: #414141;

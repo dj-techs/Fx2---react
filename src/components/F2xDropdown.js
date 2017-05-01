@@ -95,15 +95,16 @@ class F2xDropdown extends Component {
 			this.onSelect(0)
 	}
 	
-	render(){
-		const { className, style, styleBox, styleItems, list, onChange } = this.props;
+	render() {
+		const { className, style, styleBox, styleItems, list, onChange, refID, placeholder } = this.props;
 		let onC = onChange? onChange : (e) => '';
 		
 		const text = list[this.state.slc].constructor.toString().indexOf('Array') !== -1 ? list[this.state.slc][0] : list[this.state.slc];
 		
 		return (
 			<div className={`f2x-dropdown montse_light${className ? ' '+ className : ''}`} style={style}  onMouseUp={ (e) => this.onClick(e) }>
-				<div>
+				<label ref="label" className='small-font separated' style={{left: '0'}} onClick={() => this.refs[refID].focus()}>{placeholder}</label>
+				<div ref = {refID} onFocus={() => { this.refs.label.className = "small-font separated slc" }}>
 					{isNaN(text) ? text : text < 10 ? '0'+ text : text}
 				</div>
 				

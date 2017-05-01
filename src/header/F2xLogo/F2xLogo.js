@@ -243,8 +243,7 @@ class F2xLogo extends Component {
 		
 		return (
 			<div className="f2x-logo">
-				<div className="f2x-logo-img">
-		
+				<div className="f2x-logo-img">		
 					<Link to="/">
 						<img src={ ICON_LOGO } onClick={ () => console.log(store.getState() ) } width="100" height='55' />
 					</Link>

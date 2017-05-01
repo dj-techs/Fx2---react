@@ -1,7 +1,6 @@
 export const SET_VISIBILITY_MODAL = 'SET_VISIBILITY_MODAL';
 export const SET_VISIBILITY_VIDEO = 'SET_VISIBILITY_VIDEO';
 export const SET_HOME_WORKOUT = 'SET_HOME_WORKOUT';
-export const SET_VIDEO_CAROUSEL = 'SET_VIDEO_CAROUSEL';
 export const SET_USER_STATE = 'SET_USER_STATE';
 export const SET_EXERCISES = 'SET_EXERCISES';
 export const SET_FILTERS = 'SET_FILTERS';
@@ -18,12 +17,13 @@ export const SET_EVAL_LOGIN = 'SET_EVAL_LOGIN';
 export const UPDATE_WORKOUT = 'UPDATE_WORKOUT';
 export const UPDATE_WORKOUT_TRAY = 'UPDATE_WORKOUT_TRAY';
 export const SET_EVAL_CHANGE_PASSWORD = 'SET_EVAL_CHANGE_PASSWORD';
-export const SET_EVAL_FORGOT_PASSWORD = 'SET_EVAL_FORGOT_PASSWORD';
 export const SET_HOME_IMAGE = 'SET_HOME_IMAGE';
 export const SET_EMAIL = 'SET_EMAIL';
 export const SET_CARD = 'SET_CARD';
+export const SET_STARTABLE = 'SET_STARTABLE';
 export const SET_PLAN = 'SET_PLAN';
-
+export const SET_VIDEO_CAROUSEL = 'SET_VIDEO_CAROUSEL';
+export const SET_APPSTATES = 'SET_APPSTATES';
 
 
 
@@ -57,7 +57,8 @@ export const ModalTypes = {
   BECOME_PLATINUM_MEMBER: 'BECOME_PLATINUM_MEMBER',
   INVITE_FRIEND: 'INVITE_FRIEND',
   EDIT_EMAIL: 'EDIT_EMAIL',
-  GENERIC: 'GENERIC'
+  GENERIC: 'GENERIC',
+  MYGOALS_BECOME_PLATINUM: 'MYGOALS_BECOME_PLATINUM'
 }
 
 
@@ -104,15 +105,6 @@ export const setVisibilityVideo = (mode, t='', v='', i='') => {
 export const setWorkoutHome = (list) => {
   return {
     type: SET_HOME_WORKOUT,
-    list
-  }
-}
-
-
-
-export const setVideoCarousel = (list) => {
-  return {
-    type: SET_VIDEO_CAROUSEL,
     list
   }
 }
@@ -214,14 +206,6 @@ export const setEvalChangePassword = (flags) => {
 }
 
 
-export const setEvalForgotPassword = (flags) => {
-  return {
-    type: SET_EVAL_FORGOT_PASSWORD,
-    flags
-  }
-}
-
-
 export const setEvalJoin = (flags) => {
   return {
     type: SET_EVAL_JOIN,
@@ -301,10 +285,35 @@ export const setCard = (card) => {
 	}
 }
 
+export const setStartable = (startable) => {
+  return {
+    type: SET_STARTABLE,
+    startable
+  }
+}
+
 
 export const setPlan = (plan) => {
 	return {
 		type: SET_PLAN,
 		plan
 	}
+}
+
+
+export const setAppStates = (currentPage, startable) => {
+  return {
+    type: SET_APPSTATES,
+    appState: {
+      currentPage,
+      startable
+    }
+  }
+}
+
+export const setVideoCarousel = (list) => {
+  return {
+    type: SET_VIDEO_CAROUSEL,
+    list
+  }
 }

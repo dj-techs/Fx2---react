@@ -47,10 +47,6 @@ import ICON_USER from '../../media/usr_icon.svg';
 import ICON_SEARCH from '../../media/search-icon.svg';
 import ICON_FILTER from '../../media/Icon_Filter.svg';
 
-/*
- * Backgrounds
- */
-import BACK_BTN_JOIN from '../../media/button_join.svg';
 
 
 
@@ -365,19 +361,19 @@ const headerNotLogged = ({ dispatch, filter }) => (
 		<div className="f2x-header-logbox-btn">
 			<F2xButton name="SIGN IN" 
 				className="f2x-new-button-transparent separated" 
-				style={{height: '46px', width: 'auto', padding: '0 15px', fontSize: '12px'}} 
-				onClick= { ()=> { 
-						browserHistory.push('/signin')
-					} 
-				}
+				style={{height: '71px', width: 'auto', padding: '0 15px', fontSize: '11px'}} 
+				onClick={ 
+					() => 
+						dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.SIGN_IN)) 
+				} 
 			/>
 			
 			<F2xButton name="JOIN" 
 				className="f2x-new-button-black-invert separated" 
-				style={{height: '71px', width: '134px', fontSize: '12px'}} 
+				style={{height: '71px', width: '134px', fontSize: '12px'}}  
 				onClick={ 
-					browserHistory.push('/join-platinum')
-					/*() => dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.JOIN))*/
+					() => 
+						dispatch( setVisibilityModal(ModalVisibilityFilters.SHOW, ModalTypes.JOIN)) 
 				} 
 			/>
 		</div>

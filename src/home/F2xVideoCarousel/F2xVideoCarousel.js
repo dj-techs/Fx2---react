@@ -5,18 +5,14 @@ import { connect } from 'react-redux'
 /*
  * Global Vars & Functions
  */
-import { store } from '../../';
-import { MURL , guest, isMobile, isIOS } from '../../data/data';   
-import { setVisibilityModal, ModalVisibilityFilters, ModalTypes } from '../../actions';
+// import { store } from '../../';
+import { /* MURL , guest, */ isMobile, isIOS } from '../../data/data';
 
 
 
 /*
  * Components
  */
-import F2xButton from '../../components/F2xButton';
-import F2xItemList from '../../components/F2xItemList';
-import F2xVideo from '../../components/F2xVideo';
 import F2xIcon from '../../components/F2xIcon';
 
 
@@ -158,17 +154,17 @@ class f2xVideoCarousel extends Component{
 			loop: true,
 			audioSlider: false,
 			autoPlay: false,
-			arrow_position: 0,
-			arrow_move_up: true
+			arrow_position: 0
 	    };
 
 	}
 
 	componentDidMount() {
-		this.arrowTime = setInterval(
-					() => this.animateArrow(),
-					10
-				);
+		setTimeout( this.animateArrow, 500 )
+	}
+
+	componentWillUnmount() {
+		clearTimeout(this.arrowAnimate)
 	}
 
 	formatTime(seconds) {
@@ -268,36 +264,17 @@ class f2xVideoCarousel extends Component{
 		
 	}
 
-	animateArrow() {
-		if (!this.flag){ 
-			this.flag = true;
-			return
+	animateArrow = () =>  {
+		if( this.state.arrow_position === 20 ) {
+			this.setState({
+				arrow_position: 0
+			})			
 		} else {
-			clearInterval(this.arrowTime)
-			if (this.state.arrow_move_up) {
-				if(this.state.arrow_position >20) {
-					this.setState({
-						arrow_move_up: false,
-						arrow_position: 20
-					})
-				} else {
-					this.setState({
-						arrow_position: this.state.arrow_position +1
-					})
-				}
-			} else {
-				if(this.state.arrow_position <1) {
-					this.setState({
-						arrow_move_up: true,
-						arrow_position: 0
-					})
-				} else {
-					this.setState({
-						arrow_position: this.state.arrow_position-1
-					})
-				}
-			}
-		}		
+			this.setState({
+				arrow_position: 20
+			})
+		}
+		this.arrowAnimate = setTimeout( this.animateArrow, 500 )
 	}
 
 	toggleMute() {
@@ -410,10 +387,7 @@ class f2xVideoCarousel extends Component{
 		);
 
 		this.flag = false;
-
-		const alphaMask = {
-			opacity: this.state.invoke? 0.3 : 0
-		}
+		let self = this;
 
 		const playerIcon = isMobile() ? vcPlay : bigMedia;
 		return (
@@ -423,7 +397,7 @@ class f2xVideoCarousel extends Component{
 						muted
 						ref="backVideo"	
 						loop={this.state.loop}
-						autoPlay={this.state.autoPlay}
+						autoPlay={!this.state.autoPlay}
 						className="bg-back-video"
 						preload="auto"
 						src={video[this.state.id]}
@@ -453,16 +427,16 @@ class f2xVideoCarousel extends Component{
 							hidden={this.state.paused && this.state.currentTime === 0}
 						/>
 						<div 
-							className="f2x-video-player-close cursor" onClick={()=>{this.closeInvoke}} >CLOSE</div>
+							className="f2x-video-player-close cursor" onClick={() => this.closeInvoke()} >CLOSE</div>
 						<F2xIcon 	
 							className="f2x-video-prev-video cursor" 
 							icon={ prevVideo }
-							onClick={()=>{this.prevVideo}} 
+							onClick={() => this.prevVideo()} 
 							/>
 						<F2xIcon 	
 							className="f2x-video-next-video cursor" 
 							icon={ nextVideo }							
-							onClick={()=>{this.nextVideo}}
+							onClick={() => this.nextVideo()} 
 							/>
 					</div>
 					<F2xIcon
@@ -470,24 +444,24 @@ class f2xVideoCarousel extends Component{
 						icon={ comment } />
 					<F2xIcon
 						className="f2x-arrow-down cursor" 
-						style={{marginTop: this.state.arrow_position+220}} 
+						style={{marginTop: this.state.arrow_position+220, transition: 'all 0.5s'}} 
 						icon={ arrowDown } />
 					<F2xIcon
 						className="f2x-btn-get-started cursor" 
 						icon={ getStarted }
-						onClick={()=>{this.getStarted}} />
+						onClick={() => this.getStarted()} />
 					<F2xIcon 	
 						className="f2x-video-big-play cursor" 
 						icon={ playerIcon }
 						style={{marginTop: isIOS() ? -20 : -45}} 
-						onClick={()=>{this.togglePlay}} 
+						onClick={() => this.togglePlay()} 
 						hidden={!this.state.paused || this.state.hold} />
 					<div className="blurMask">
 						<video
 							muted
 							ref="blurVideo"
 							loop={this.state.loop}
-							autoPlay={this.state.autoPlay}
+							autoPlay={!this.state.autoPlay}
 							className="bg-back-video"
 							preload="auto"
 							src={video[this.state.id]}

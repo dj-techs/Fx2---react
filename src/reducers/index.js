@@ -15,10 +15,10 @@ import { F2xEvalJoin } from './F2xEvalJoin'
 import { F2xEvalLogin } from './F2xEvalLogin'
 import { F2xMyWorkouts } from './F2xMyWorkouts'
 import { F2xEvalChangePassword } from './F2xEvalChangePassword'
-import { F2xEvalForgotPassword } from './F2xEvalForgotPassword'
 import { F2xHomeImage } from './F2xHomeImage'
 import { F2xCard } from './F2xCard'
 import { F2xPlan } from './F2xPlan'
+import { F2xAppStates } from './F2xAppStates'
 import { F2xVideoCarousel } from './F2xVideoCarousel'
 
 /*
@@ -28,7 +28,6 @@ import { F2xVideoCarousel } from './F2xVideoCarousel'
 const reducer = combineReducers({
 	modal: F2xModal,
 	homeWorkout: F2xHomeWorkout,
-	videoCarousel: F2xVideoCarousel,
 	user: F2xUser,
 	exercises: F2xExercise,
 	filters: F2xFilters,
@@ -42,10 +41,11 @@ const reducer = combineReducers({
 	evalJoin: F2xEvalJoin,
 	evalLogin: F2xEvalLogin,
 	evalChangePassword: F2xEvalChangePassword,
-	evalForgotPassword: F2xEvalForgotPassword,
 	homeImage: F2xHomeImage,
 	card: F2xCard,
-	plan: F2xPlan
+	plan: F2xPlan,
+	videoCarousel: F2xVideoCarousel,
+	appState: F2xAppStates
 })
 
 export default reducer

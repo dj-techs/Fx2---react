@@ -39,10 +39,37 @@
 	margin-top: -7px;
 	
 }
-.f2x-dropdown div {
-	
+
+.f2x-dropdown:focus {
+	border-bottom-color: #414141;
 }
 
+.f2x-dropdownlabel {
+	position: absolute;
+	
+	top: 50%;
+	left: 0;
+	
+	margin-top: -10px;
+	
+	font-size: 15px;
+	color: #9e9e9e;
+	
+	overflow: hidden;
+	
+	white-space: nowrap;
+	
+	transition:all .2s ease-in-out;
+	
+	cursor: text;
+} 
+.f2x-dropdown label.slc {
+	top: -2px;
+	/*left: 0;*/
+	font-size: 10px;
+	
+	cursor: default;
+} 
 
 .f2x-dropdown-border {
 	padding: 5px 0 5px 15px;

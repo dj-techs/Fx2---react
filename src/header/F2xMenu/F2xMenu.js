@@ -85,7 +85,7 @@ const menu = [
 	[["WORKOUT", "BUILDER"], "/exercise"],
 	[["MY", "WORKOUTS"], "/myworkout"],
 	[["PRECONFIGURED", "WORKOUTS"], "/workout"],
-	[["MY", "GOALS"], "/workout"]
+	[["MY", "GOALS"], "/mygoals"]
 ]
 
 
@@ -107,11 +107,13 @@ class f2xMenu extends Component {
 			case 'workout':
 				menu = 3;
 				break;
+			
 			case 'mygoals':
 				menu = 4;
 				break;
 			
 			default:
+				menu = 0;
 				break;
 		}
 		
@@ -138,10 +140,6 @@ class f2xMenu extends Component {
 			
 			case 'PRECONFIGURED':
 				menu = 3;
-				break;
-
-			case 'MY GOALS':
-				menu = 4;
 				break;
 			
 			default:

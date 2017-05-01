@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 /*
  * Global Vars & Functions
  */
-import { setWorkouts, setTitleMobile, setMobileFilter, setMobileFilterBox } from '../actions'
+import { setWorkouts, setAppStates, setTitleMobile, setMobileFilter, setMobileFilterBox } from '../actions'
 import { MURL, isMobile } from '../data/data';
 import { store } from '../.';
 
@@ -356,14 +356,13 @@ class f2xWorkout extends Component {
 		
 		this.state = {
 			slc: 0
-		}
-		
+		}		
 		this.onChange = this.onChange.bind(this);
 	}
 	
 	componentWillMount() {
 		store.dispatch( setTitleMobile('PRECONFIGURED') );
-		
+		store.dispatch ( setAppStates('workoutbuilder'))
 		if(isMobile()){
 			store.dispatch( setMobileFilter('block') );
 		}

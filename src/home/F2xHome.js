@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { browserHistory } from 'react-router';
-import { DragDropContext } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
-import { findDOMNode } from 'react-dom';
-import { Grid, col, Row } from 'react-bootstrap';
-import $ from 'jquery';
+import $ from 'jquery'
+
+
 
 
 
@@ -13,19 +11,16 @@ import $ from 'jquery';
  * Global Vars & Functions
  */
 import { store } from '../';
-import {setTitleMobile, setVisibilityModal, ModalVisibilityFilters, ModalTypes} from '../actions/';
-import {getFX2DB, F2xDB, MURL, updateSpecificWorkoutRequest, isMobile} from '../data/data';
-
-
+import { setAppStates } from '../actions/';
 
 
 
 /*
  * Components
  */
-import F2xVideoCarousel from './F2xVideoCarousel/F2xVideoCarousel'
+// import F2xPoster from './F2xPoster/F2xPoster'
 import F2xWorkout from './F2xWorkout/F2xWorkout'
-import F2xExercise from '../components/F2xExercise';
+import F2xVideoCarousel from './F2xVideoCarousel/F2xVideoCarousel'
 
 
 
@@ -34,11 +29,14 @@ import F2xExercise from '../components/F2xExercise';
  */
 import './F2xHome.css';
 
-class F2xScrollAnimation extends Component {
+
+class f2xScrollAnimation extends Component {
 
 	constructor(props) {
+
 		super(props)
 		this.state = {
+			mounted: props.mounted,
 			tutoTitleOpacity: 0,
 			thumbRightPos: 154,
 			thumbMovePos: {left: 203, top: 127},
@@ -53,48 +51,71 @@ class F2xScrollAnimation extends Component {
 			trackTitleClass: 'f2x-title',
 			trackBodyClass: 'f2x-title',
 			trackKarlieClass: 'f2x-karlie',
+			trackLineClass: 'f2x-linear'
 		}
-
-		this.handleScroll = this.handleScroll.bind(this);
-		
+		this.handleScroll =  this.handleScroll.bind(this);
 	}
-	
+
+	componentWillReceiveProps(props) {
+		this.setState(
+			Object.assign({}, this.state,{
+				currentPage: props.currentPage
+			})
+	    )
+	}
+
 	componentWillMount() {
+		console.log('scroll will mount')
+		store.dispatch ( setAppStates('home'))
 		window.addEventListener('scroll', this.handleScroll);
 	}
 
-	componentWillUnmount() {
-		document.documentElement.removeEventListener('scroll', this.handleScroll);
-	}
-
 	componentDidMount() {
+		console.log('scroll mounted')
 		this.vheight = $(".f2x-home-logo").position().top;
 		this.tposition = $(".f2x-tutorial-title").position().top;
 	}
 
+	componentWillUnmount() {
+		console.log('scroll will unmount')
+		window.removeEventListener('scroll', this.handleScroll)
+	}
+
 	handleScroll() {
-		console.log(window.scrollY);
-		this.currentposition = window.scrollY;
-		let topacity = (this.currentposition - this.tposition + this.vheight - 100)/200;
-		let tutoprogress = 0;
-		let curOpacity = 0;
+		console.log("scroll working")
+		this.currentposition = window.scrollY
+		let topacity = (this.currentposition - this.tposition + this.vheight - 100)/200
+		let tutoprogress = 0
+		let curOpacity = 0
 		if(topacity < 0) {
 			topacity = 0;
 		} else if (topacity > 1) {
-			tutoprogress = topacity - 1;
-			tutoprogress /=2;
+			tutoprogress = topacity - 1
+			tutoprogress /=2
 			if(tutoprogress > 1){ 
-				tutoprogress = 1;
-				curOpacity = topacity - 2;
-				curOpacity /= 2;
+				tutoprogress = 1
+				curOpacity = topacity - 2
+				curOpacity /= 2
 			}
 			if(curOpacity > 1)
-				curOpacity = 1;
-			curOpacity = 1 - curOpacity;
-			topacity = 1;
+				curOpacity = 1
+			curOpacity = 1 - curOpacity
+			topacity = 1
 		}
+		this.setState(
+			Object.assign({}, this.state,{
+					currentPage: 'home',
+					tutoTitleOpacity: topacity,
+					thumbRightPos: 154*(1-tutoprogress),
+					thumbMovePos: {left: 203 + 259*tutoprogress, top: 127*(1-tutoprogress)},
+					cursorPos: {left: 170+259*tutoprogress, top: 84+127*(1-tutoprogress)},
+					curOpacity: curOpacity
+				})
+		)
+	
 
 		if(this.currentposition > 1000 ) {
+			
 			setTimeout(() => {this.setState({reachTitleClass: 'f2x-title show'})}, 0)
 			setTimeout(() => {this.setState({reachLine1Class: 'f2x-linear linear-1'})}, 500)
 			setTimeout(() => {this.setState({reachSiteClass: 'f2x-title show'})}, 1000)
@@ -115,17 +136,14 @@ class F2xScrollAnimation extends Component {
 
 		}
 
+		if(this.currentposition > 1600 ){
+			setTimeout(() => {this.setState({trackLineClass: 'f2x-linear linear-3'})}, 0)
+			setTimeout(() => { this.refs.subVideo.play() }, 1000)
+		}
+
 		if(this.currentposition > 1700 ){
 			setTimeout(() => {this.setState({trackKarlieClass: 'f2x-karlie show'})}, 0)
 		}
-
-		this.setState({
-			tutoTitleOpacity: topacity,
-			thumbRightPos: 154*(1-tutoprogress),
-			thumbMovePos: {left: 203 + 259*tutoprogress, top: 127*(1-tutoprogress)},
-			cursorPos: {left: 170+259*tutoprogress, top: 84+127*(1-tutoprogress)},
-			curOpacity: curOpacity
-		})
 	}
 
 	render(){
@@ -133,7 +151,7 @@ class F2xScrollAnimation extends Component {
 		return (
 			<div>
 				<div className="f2x-tutorial-title" style={{ opacity: this.state.tutoTitleOpacity, transform: 'scale(' + ( 2 - this.state.tutoTitleOpacity) + ')' }} />
-				<div className="f2x-tutorial-container">				
+				<div className="f2x-tutorial-container" style={{height:'300px'}}>				
 					<div className="f2x-tutorial-thumb-left"/>
 					<div className="f2x-tutorial-thumb-right" style={{ right: this.state.thumbRightPos }}/>
 					<div className="f2x-tutorial-thumb-move" style={{ left: this.state.thumbMovePos.left, top: this.state.thumbMovePos.top }}/>
@@ -154,7 +172,7 @@ class F2xScrollAnimation extends Component {
 				</div>
 				<div className="f2x-home-bar"/>
 				<div className="f2x-home-content-2">
-					<div style={{ maxWidth: '980px', padding: '20px 0 15px 0', margin: '0 auto', height: '273px' }}>
+					<div style={{ maxWidth: '980px', padding: '20px 0 15px 0', margin: '0 auto', height: '273px', position: 'relative' }}>
 						<div style={{float: 'left'}}>
 						<h2 className={ this.state.trackTitleClass } style={{color:"#1d1d1d"}}>TRACK YOUR PROGRESS</h2>
 						<h2 className={ this.state.trackTitleClass } style={{color:"#9B9B9B"}}>GET FIT LIKE A MODEL</h2>
@@ -166,13 +184,13 @@ class F2xScrollAnimation extends Component {
 						</div>
 						<video
 							muted
-							ref="subVideo"
-							style= {{float:'right'}}
-							loop={true}
-							autoPlay={false}
-							className="f2x-home-content2-video"
-							preload="auto"
-							src={"../media/video/6.mp4"}
+							ref = "subVideo"
+							style = {{position: 'absolute', top: '100px', right: '0px'}}
+							loop = {true}
+							autoPlay = {false}
+							className = "f2x-home-content2-video"
+							preload = "auto"
+							src = {"../media/video/6.mp4"}
 						/>
 					</div>
 					<div className={ this.state.trackKarlieClass } />					
@@ -181,8 +199,8 @@ class F2xScrollAnimation extends Component {
 			</div>
 		)
 	}
-
 }
+
 
 class F2xHomeFooter extends Component {
 	render(){
@@ -191,39 +209,29 @@ class F2xHomeFooter extends Component {
 				<div className='f2x-footer-back-img' >
 					<button className='f2x-home-btn-select' onClick={ () => {browserHistory.push('/exercise')} }>SELECT</button>
 					<button className='f2x-home-btn-select' onClick={ () => {browserHistory.push('/join-platinum')} }>SELECT</button>
-				</div>
-				{/*<div className="col-xs-6">ss
-					<h2>BUY</h2>
-					<h2>SINGLE</h2>
-					<h2>WORKOUT</h2>
-					<h1><h2>$</h2>2.99<h2>/ea</h2></h1>
-					<h2>Configure your workout and have <strong>unlimited</strong> access to it.</h2>
-				</div>
-				<div className="col-xs-6">
-					<h2>BECOME</h2>
-					<h2>PLATINUM</h2>
-					<h2>MEMBER</h2>
-				</div>*/}
-				
+				</div>				
 			</div>
 		)
 	}
 }
 
+
 class F2xHome extends Component {
 
+
 	componentWillMount() {
-		const {pathParam} = this.props.params;
-		store.dispatch( setTitleMobile('') );
-		if(pathParam){
-			store.dispatch( setVisibilityModal( ModalVisibilityFilters.SHOW, ModalTypes.JOIN, {invite: pathParam}) );
-		}		
+		console.log('home will mounted')
+		this.mounted = true
+	}
+
+	componentWillUnmount() {
+		console.log('home will unmounted')
+		this.mounted = false
 	}
 
 	render(){
-		
 		return (
-			<div className="f2x-home" onScroll={ this.handleScroll }>
+			<div className="f2x-home">
 				{/*<F2xPoster />*/}
 				<F2xVideoCarousel />
 				<div className='f2x-home-logo'>
@@ -240,4 +248,16 @@ class F2xHome extends Component {
 	}
 }
 
-export default DragDropContext(HTML5Backend)(F2xHome)
+const mapStateToProps = (state) => {
+	const { appState } = state;
+	
+	return {
+		currentPage: appState.currentPage
+	}
+}
+
+const F2xScrollAnimation = connect(
+	mapStateToProps
+)(f2xScrollAnimation);
+
+export default F2xHome;

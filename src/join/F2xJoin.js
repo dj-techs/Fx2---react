@@ -1,6 +1,6 @@
 import React,  { Component } from 'react';
 import { connect } from 'react-redux'
-import { Router, browserHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 
 
@@ -91,8 +91,8 @@ class f2xJoin  extends Component {
 			payhelp: false
 	    };
 	    
-	    // this.update = this.update.bind( this );    							 	// Generic UPDATE inner function for our Forms
-	    // this.procJoin = this.procJoin.bind( this );    							// Generic UPDATE inner function for our Forms
+	    this.update = this.update.bind( this );    							 	// Generic UPDATE inner function for our Forms
+	    this.procJoin = this.procJoin.bind( this );    							// Generic UPDATE inner function for our Forms
 	}
 	
 	componentDidMount(){
@@ -197,10 +197,10 @@ class f2xJoin  extends Component {
 		   	joinRequest(this.state.value); 
 
 		   	if (!this.state.enableValidation) {
-				this.setState({
+				this.setState(Object.assign( {}, this.state, {
 			    	enableValidation:true,
 			    	spinner: true
-		        })
+		        }))
 		    }	   		
 	    }
 	}
@@ -270,9 +270,9 @@ class f2xJoin  extends Component {
 		const savein = invite ? invite.savein ? invite : {} : {};
 		
 		return (
-			<div className="cuerpo" style={{bottom: '0', maxWidth: '560px', position: 'relative', margin: '0 auto', paddingTop: '75px'}}>
-				<div className='f2x-btn-back' onClick={ () => { browserHistory.goBack } }/>
-				<div className={ this.state.signable? 'hidden' : '' } style={{ textAlign: 'center', fontSize: '16px', lineHeight: '24px'}}>BECOME A</div>
+			<div className="cuerpo" style={{bottom: '0', maxWidth: '560px', paddingTop: '75px', margin: '0 auto'}}>
+				<div className='f2x-btn-back' onClick={ browserHistory.goBack }/>
+				<div className={ this.state.signable? 'hidden' : '' } style={{ textAlign: 'center', marginTop: '50px', fontSize: '16px', lineHeight: '24px'}}>BECOME A</div>
 				<div style={{ textAlign: 'center', fontSize: '20px', lineHeight: '20px', marginTop: this.state.signable? '74px' : '0'}}>PLATINUM MEMBER</div>
                 <div className={ this.state.signable? 'hidden' : '' } style={{ textAlign: 'center', fontSize: '18px', marginTop: '15px'}}>$<span style={{fontSize: '30px'}}>12.99</span>/mo</div>
 				<div className={ this.state.signable? 'f2x-welcome' : 'hidden'} />
@@ -316,16 +316,16 @@ class f2xJoin  extends Component {
 					
 				</form>
 				<button className = {this.state.signable? 'f2x-new-button-black' : 'hidden'  }  style={{width: '210px', height: '52px', marginLeft: 'calc(50% - 105px)'}}>BUILD A WORKOUT</button>
-				<div className={ this.state.signable? 'hidden' : '' } style={{ margin: '0 auto', marginTop: '5px', maxWidth: '310px', textAlign: 'center', color: this.state.paypal? '#414141' : '#9e9e9e'}} onClick={ () => { if(this.state.paypal){ () => { browserHistory.push('paypalsignin')} } } }>
+				<div className={ this.state.signable? 'hidden' : '' } style={{ margin: '0 auto', marginTop: '5px', maxWidth: '310px', textAlign: 'center', color: this.state.paypal? '#414141' : '#9e9e9e'}} onClick={ () => { if(this.state.paypal){ browserHistory.push('paypalsignin') } } }>
 				    <div className = {this.state.paypal? 'f2x-paypal' : 'f2x-paypal-disabled'}/>PAY WITH PAYPAL
 				</div>
 				
 				<div className={ this.state.signable? 'hidden' : '' + "small-font" } style={{ maxWidth: '310px', margin: '5px auto', textAlign: 'center', color: '#414141'}}>
 					Already a member?{'  '}
-                    <span onClick={ () => { browserHistory.push('/signin')} } style={{textDecoration: 'underline', cursor: 'pointer'}}>
+                    <span onClick={() => { browserHistory.push('/signin')} } style={{textDecoration: 'underline', cursor: 'pointer'}}>
                         Sign In
                     </span>
-				</div>*/}
+				</div>
 			</div>
 		)
 	}

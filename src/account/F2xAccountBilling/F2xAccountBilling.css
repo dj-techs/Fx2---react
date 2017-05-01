@@ -135,6 +135,57 @@
 	border-top: 20px solid #fff;
 }
 
+.f2x-payment-terms {
+	position: absolute;
+	
+	bottom: 52px;
+	left: -35px;
+	
+	width: 250px;
+	    
+	background: #fff;
+	
+	border: solid 1px #969696;
+	
+	border-radius: 3px;
+	
+	padding: 17px 15px 15px;
+	
+	filter: drop-shadow(0 3px 5px rgba(0,0,0,.3));
+	
+	color: #414141;
+	font-weight: 200;
+	font-size: 11px;
+	text-align: left;
+	
+	display: none;
+}
+
+.f2x-payment-terms:before {
+	content: '';
+	
+	position: absolute;
+	
+	top: 100%;
+	left: calc(50% - 10px);
+	
+	border-right: 18px solid transparent;
+	border-left: 18px solid transparent;
+	border-top: 20px solid #969696;
+}
+.f2x-payment-terms:after {
+	content: '';
+	
+	position: absolute;
+	
+	top: CALC(100% - 1px);	
+	left: calc(50% - 10px);
+	
+	border-right: 18px solid transparent;
+	border-left: 18px solid transparent;
+	border-top: 20px solid #fff;
+}
+
 .f2x-account-terms u {
 	cursor: pointer;
 }

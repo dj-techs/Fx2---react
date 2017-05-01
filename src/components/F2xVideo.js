@@ -326,7 +326,6 @@ class f2xVideo extends Component {
 	            hold: mhold
 	        })
         )	
-		console.log("updatedasdf")	
 	}
 	
     togglePlay() {
@@ -440,7 +439,6 @@ class f2xVideo extends Component {
 	
 	
 	render(){
-		console.log('render called');
 		const playerIcon = isMobile() ? vcPlay : bigMedia;
 		
 		
