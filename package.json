@@ -33,5 +33,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://f2x.herokuapp.com:3001/"
+  "proxy": "https://f2x-stage.appspot.com/"
 }
