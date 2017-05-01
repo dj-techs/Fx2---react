@@ -327,7 +327,7 @@ class f2xBecomePlatinumMember extends Component {
 						</div>
 					</div>
                     <div className={ this.state.startable? "hidden" : "small-font separated" } style={{fontSize: '10px', margin: '25px auto 10px auto', textDecoration: 'underline', cursor: 'pointer', position: 'relative'}} onClick={this.togglePayment}>Payment Terms & Conditions
-                        <div ref="payment" className="f2x-payment-terms" style={{bottom: '40px', left: '150px'}} onClick={this.togglePayment}>
+                        <div ref="payment" className="f2x-payment-terms" style={{bottom: '40px', left: '0px'}} onClick={this.togglePayment}>
                             Lorem the quick brown fox jumps over lazy dog, Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog Lorem the quick brown fox jumps over lazy dog.
                         </div>
                     </div>
